@@ -39,7 +39,7 @@ const VideoSection = ({ src }: VideoSectionProps) => {
   return (
     <>
       <section
-        className="w-full max-h-[800px] relative bg-[#F6F3F6] flex items-center justify-center overflow-hidden pb-20 "
+        className="w-full max-h-[800px] relative bg-[#F6F3F6] flex items-center justify-center overflow-hidden  lg:pb-16 "
         onClick={() => setIsLightboxOpen(true)}
       >
         <video
@@ -48,7 +48,7 @@ const VideoSection = ({ src }: VideoSectionProps) => {
           loop
           muted
           playsInline
-          className="w-auto h-auto object-cover rounded-[12px] cursor-pointer"
+          className="w-auto h-auto object-cover lg:rounded-[12px] cursor-pointer"
         />
       </section>
 
@@ -70,7 +70,6 @@ const VideoSection = ({ src }: VideoSectionProps) => {
                 },
               ],
             },
-            // ...
           ]}
         />
       )}

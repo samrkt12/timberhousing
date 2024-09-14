@@ -92,7 +92,7 @@ const Carousel3d = ({ images }: Props) => {
           zoom={{ ref: zoomRef }}
         />
       )}
-      <div className="relative w-full mt-10">
+      <div className="relative w-full mt-4 md:mt-7 lg:mt-10">
         <div
           className={`overflow-hidden w-full ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
@@ -102,13 +102,13 @@ const Carousel3d = ({ images }: Props) => {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="flex">
+          <div className="flex w-full px-2.5 md:px-4 lg:px-0">
             {images.map((img, index) => (
               <div
                 key={index}
-                className="z-12 flex-shrink-0 bg-white rounded-[15px] shadow-lg relative mr-8"
+                className="z-12 w-full md:w-fit h-fit flex-shrink-0 bg-white rounded-[15px] shadow-lg relative mr-8"
               >
-                <div className="w-[460px] h-[260px] relative overflow-hidden rounded-[20px]">
+                <div className="w-full md:w-[460px] h-[220px] sm:h-[280px] md:h-[260px] relative overflow-hidden rounded-[20px]">
                   <Image
                     src={img}
                     alt={`Model ${index + 1}`}
@@ -133,7 +133,7 @@ const Carousel3d = ({ images }: Props) => {
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-10 mx-auto max-w-[1200px]">
+        <div className="flex justify-between items-center mt-3 md:mt-5 lg:mt-10 mx-auto max-w-[1200px] px-3  ">
           <button
             className={`rounded-full  ${
               prevBtnEnabled ? "" : "opacity-70 cursor-not-allowed"
@@ -141,20 +141,20 @@ const Carousel3d = ({ images }: Props) => {
             onClick={scrollPrev}
             disabled={!prevBtnEnabled}
           >
-            <IoIosArrowDropleftCircle className="w-[55px] h-[55px] text-secondary-base rounded-full " />
+            <IoIosArrowDropleftCircle className="w-8 h-8 md:w-10 md:h-10 lg:w-[55px] lg:h-[55px] text-secondary-base rounded-full " />
           </button>
 
           <div className="flex gap-2">
             {images.map((_, index) => (
               <div
                 key={index}
-                className={`px-3 py-0.5 flex items-center rounded-full transition-transform duration-300 mr-2 ${
+                className={`px-3 md:px-4 py-0.5 flex items-center rounded-full transition-transform duration-300 mr-2 ${
                   index === selectedIndex
-                    ? "bg-primary-base scale-125 text-whites-light"
+                    ? "bg-primary-base scale-110 lg:scale-125 text-whites-light"
                     : "text-[#777777]"
                 }`}
               >
-                <p className="text-[22px]">{index + 1}</p>
+                <p className="text-sm md:text-xl ">{index + 1}</p>
               </div>
             ))}
           </div>
@@ -166,7 +166,7 @@ const Carousel3d = ({ images }: Props) => {
             onClick={scrollNext}
             disabled={!nextBtnEnabled}
           >
-            <IoIosArrowDroprightCircle className="w-[55px] h-[55px]  text-secondary-base rounded-full " />
+            <IoIosArrowDroprightCircle className="w-8 h-8 md:w-10 md:h-10 lg:w-[55px] lg:h-[55px] text-secondary-base rounded-full " />
           </button>
         </div>
       </div>

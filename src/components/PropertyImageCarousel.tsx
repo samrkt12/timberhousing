@@ -31,55 +31,62 @@ const PropertyImageCarousel = ({
   const remainingImagesCount = porpertyImages.length - 4;
 
   const handleImageClick = (index: number) => {
+    console.log("Image clicked, index:", index);
     setCurrentIndex(index);
     setOpen(true);
   };
 
   return (
-    <div className="relative w-[700px] h-[520px] rounded-[10px]">
+    <div className="relative w-full max-w-[600px] lg:max-w-[700px] lg:w-[700px] h-full lg:h-[520px] rounded-[10px] mx-auto">
       {/* Main Image */}
-      <div
-        className="relative w-full h-[460px] cursor-pointer transition-transform duration-300 hover:scale-105"
-        onClick={() => handleImageClick(0)}
-      >
-        <Image
-          src={porpertyImages[0]}
-          alt="Main"
-          width={800}
-          height={600}
-          className="w-full h-full object-cover rounded-[10px]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-50 rounded-[10px]" />
-      </div>
-
-      {/* Thumbnails */}
-      <div className="absolute flex w-full bottom-0 justify-evenly">
-        {porpertyImages.slice(1, 5).map((image, index) => (
-          <div
-            key={index}
-            className="relative w-[156px] h-[123px] border-[3px] border-whites-light rounded-[10px] bg-whites-light  cursor-pointer transition-transform duration-300 hover:scale-110"
-            onClick={() =>
-              index === 3 && remainingImagesCount > 0
-                ? handleImageClick(4)
-                : handleImageClick(index + 1)
-            }
-          >
-            <Image
-              src={image}
-              alt={`Small Image ${index + 1}`}
-              width={300}
-              height={200}
-              className="w-full h-full object-cover rounded-[10px]"
-            />
-            {index === 3 && remainingImagesCount > 0 && (
-              <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)] flex items-center justify-center rounded-[10px]">
-                <span className="text-white text-[20px] font-medium cursor-pointer text-center px-5 leading-[22px]">
-                  View more ({remainingImagesCount})
-                </span>
-              </div>
-            )}
-          </div>
-        ))}
+      <div className="relative w-full h-full cursor-pointer mb-8">
+        <div
+          className="h-full"
+          onClick={() => {
+            handleImageClick(0);
+            console.log("clicked");
+          }}
+        >
+          <Image
+            src={porpertyImages[0]}
+            alt="Main"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover rounded-[10px]"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-50 rounded-[10px] pointer-events-none" />
+        {/* Thumbnails */}
+        <div className="absolute flex w-full -bottom-10 lg:-bottom-12 gap-2 justify-evenly px-2">
+          {porpertyImages.slice(1, 5).map((image, index) => (
+            <div
+              key={index}
+              className={`${
+                index === 2 ? "hidden lg:block" : ""
+              } relative z-30 w-[30%] lg:w-[23%] min-h-[90px] h-auto lg:h-[125px] border-[3px] border-whites-light rounded-[10px] bg-whites-light  cursor-pointer transition-transform duration-300 hover:scale-110`}
+              onClick={() =>
+                index === 3 && remainingImagesCount > 0
+                  ? handleImageClick(4)
+                  : handleImageClick(index + 1)
+              }
+            >
+              <Image
+                src={image}
+                alt={`Small Image ${index + 1}`}
+                width={250}
+                height={200}
+                className="w-full h-full object-cover rounded-[10px]"
+              />
+              {index === 3 && remainingImagesCount > 0 && (
+                <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)] flex items-center justify-center rounded-[10px]">
+                  <span className="text-white text-base lg:text-[20px] font-medium cursor-pointer text-center px-3 lg:px-5 leading-[22px]">
+                    View more ({remainingImagesCount})
+                  </span>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
 
       <Lightbox

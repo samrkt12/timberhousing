@@ -53,7 +53,7 @@ const Model3dCard = ({ model }: { model: ModelData }) => {
             </div>
           </div>
 
-          <div className="text-[#292929] border border-[#DFDFDF] rounded-[10px] py-1 pb-0 mb-3">
+          <div className="text-[#292929] border border-[#DFDFDF] rounded-[10px] py-1 pb-0 mb-3 overflow-hidden">
             <div className="flex justify-between text-sm mb-2 px-2.5">
               <span className="font-light text-[15px] tracking-wide md:text-base leading-[22px] md:leading-6">
                 Gross living area:

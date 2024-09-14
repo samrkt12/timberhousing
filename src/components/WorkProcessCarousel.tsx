@@ -49,8 +49,8 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
   };
 
   return (
-    <div className="relative w-full max-w-screen-xl mx-auto mb-16">
-      <div className="flex items-center justify-center mt-[52px] mb-[45px]">
+    <div className="relative w-full max-w-screen-xl mx-auto mb-5 lg:mb-16">
+      <div className="flex items-center justify-center my-6 md:my-8 lg:mt-[48px] lg:mb-[42px]">
         <Image
           src="/vector1.png"
           width={350}
@@ -58,7 +58,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
           alt="vector line"
           className="w-10 md:w-[200px] lg:w-[350px]"
         />
-        <h2 className="mx-1 text-[32px] leading-[46px] font-semibold text-[#352E39] whitespace-nowrap">
+        <h2 className="mx-1 text-[22px] leading-[30px] lg:text-3xl lg:leading-10  font-semibold text-[#352E39] whitespace-nowrap">
           How it works?
         </h2>
         <Image
@@ -69,26 +69,26 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
           className="w-10 md:w-[200px] lg:w-[350px]"
         />
       </div>
-      <div className="relative flex justify-between items-center z-20 my-10">
+      <div className="relative flex justify-between items-center z-20 mt-5 md:my-8 lg:my-10 px-3 md:px-6 lg:px-0">
         {steps.map((step, index) => (
           <div
             key={index}
-            className="flex flex-col items-center h-[115px] w-[140px]"
+            className="flex flex-col items-center lg:h-[115px] lg:w-[140px]"
           >
             <div
-              className={`relative z-20 cursor-pointer w-fit px-5 py-3 flex items-center justify-center rounded-full border-[2px] border-[#D75337] transition-colors duration-500 ${
+              className={`relative z-20 cursor-pointer w-fit px-2 md:px-3.5 lg:px-5 py-1.5 lg:py-3 flex items-center justify-center rounded-full border-[2px] border-[#D75337] transition-colors duration-500 ${
                 selectedIndex >= index
                   ? "bg-[#D75337] text-whites-light"
                   : "bg-whites-light text-[#D75337]"
               }`}
               onClick={() => handleStepClick(index)}
             >
-              <span className="text-[22px] leading-[26px] font-bold">
+              <span className=" lg:text-[22px] leading-4 md:leading-[22px] lg:leading-[26px] font-bold">
                 {index + 1}
               </span>
             </div>
             <p
-              className={`text-base mt-3 max-w-[20ch] text-center ${
+              className={`text-base mt-3 max-w-[20ch] hidden lg:block text-center ${
                 selectedIndex >= index
                   ? "text-[#161616] font-medium"
                   : "text-[#696969]"
@@ -98,7 +98,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
             </p>
           </div>
         ))}
-        <div className="absolute inset-0 transform translate-y-[21%] z-10 w-[90%] mx-auto">
+        <div className="absolute inset-0 transform translate-y-[46%] lg:translate-y-[21%] z-10 w-[90%] mx-auto">
           <Line
             percent={selectedIndex * (100 / steps.length + 2)}
             strokeWidth={0.5}
@@ -118,8 +118,8 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
       >
         <div className="flex">
           {steps.map((step, index) => (
-            <div className="flex-none w-full text-center p-4 pt-0" key={index}>
-              <div className="w-[560px] h-[410px] mx-auto mb-12">
+            <div className="flex-none w-full text-center p-4 pt-1" key={index}>
+              <div className="w-full max-w-[560px] md:w-[560px] h-[300px] md:h-[350px] lg:h-[410px] mx-auto mb-3 md:mb-8 lg:mb-12">
                 <Image
                   src={step.image}
                   alt={`Step ${index + 1}`}
@@ -128,16 +128,16 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="relative mx-auto text-left w-fit">
+              <div className="relative mx-auto text-left w-fit px-6 lg:px-0">
                 <div className="relative z-30 h-[120px]">
-                  <h2 className="text-[#161616] text-2xl leading-6 font-medium mb-[10px]">
+                  <h2 className="text-[#161616] text-lg md:text-xl lg:text-2xl leading-6 font-medium mb-1.5 lg:mb-[10px]">
                     {index + 1}. {step.title}
                   </h2>
-                  <p className="text-lg text-[#434343] max-w-[60ch] font-light">
+                  <p className="lg:text-lg text-[#434343] max-w-[60ch] font-light">
                     {step.description}
                   </p>
                 </div>
-                <span className="absolute left-[-48%] bottom-[-35%] transform translate-x-1/2 text-[#F2F2F2] text-[190px] leading-[240px] font-semibold z-10">
+                <span className="absolute left-[-25%] lg:left-[-48%] bottom-[-20%] lg:bottom-[-35%] transform translate-x-1/2 text-[#F2F2F2] text-[130px] lg:text-[190px] leading-[200px] lg:leading-[240px] font-semibold z-10">
                   {`0${index + 1}`}
                 </span>
               </div>

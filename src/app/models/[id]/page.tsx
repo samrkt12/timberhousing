@@ -98,34 +98,34 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
           />
         </div>
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.6)] z-10"></div>
-        <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12 py-4">
-          <div className="flex items-center gap-1 lg:gap-2">
+        <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-3 pr-0 md:px-8 lg:px-12 py-3 md:py-4">
+          <div className="flex items-center gap-0.5 md:gap-1.5 lg:gap-2">
             <Link
               href="/"
-              className="text-xs lg:text-sm  leading-6 lg:leading-7 hover:text-primary-light transition-colors duration-300"
+              className="text-xs lg:text-sm leading-6 lg:leading-7 hover:text-primary-light transition-colors duration-300"
             >
               Home
             </Link>
-            <IoIosArrowForward className="text-primary-base w-4 h-4" />
+            <IoIosArrowForward className="text-primary-base w-4 md:w-5 h-4 md:h-5" />
             <Link
               href={`/${slug}`}
-              className="text-xs lg:text-sm  leading-6 lg:leading-7 hover:text-primary-light transition-colors duration-300"
+              className="text-xs lg:text-sm  text-center leading-6 lg:leading-7 hover:text-primary-light transition-colors duration-300"
             >
               {`${model.category} Series`}
             </Link>
-            <IoIosArrowForward className="text-primary-base w-4 h-4" />
+            <IoIosArrowForward className="text-primary-base w-4 md:w-5 h-4 md:h-5" />
             <Link
               href={`/models/${model.id}`}
-              className="text-xs lg:text-sm  leading-6 lg:leading-7 font-semibold hover:text-primary-light transition-colors duration-300"
+              className="text-xs md:text-[13px] lg:text-sm text-center leading-6 lg:leading-7 font-semibold hover:text-primary-light transition-colors duration-300"
             >
               {model.name}
             </Link>
           </div>
-          <div className="my-12 lg:my-52 text-left border-l-[6px] px-5 py-2">
-            <h1 className="font-semibold text-[28px] lg:text-[42px]  leading-9 lg:leading-[52px] mb-1">
+          <div className="my-10 md:my-20 lg:my-48 text-left border-l-[6px] px-2.5 md:px-5 py-2">
+            <h1 className="font-semibold text-[22px] md:text-[28px] lg:text-[42px]  leading-8 md:leading-9 lg:leading-[52px] mb-1">
               {model.name}
             </h1>
-            <p className="text-[#FF6847] text-2xl lg:text-[34px] lg:leading-10 font-semibold">
+            <p className="text-[#ff6542] text-xl md:text-2xl lg:text-[34px]  lg:leading-10 font-semibold">
               {model.category}
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
       </div>
 
       {/*Second section */}
-      <div className="relative z-20 flex justify-between gap-1 lg:gap-2 h-full w-full max-w-screen-xl mx-auto px-2 md:px-4 lg:px-0 py-2 lg:py-4 my-3 lg:my-8 ">
+      <div className="relative z-20 flex justify-between gap-1 lg:gap-2 h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-0 py-1.5 mb-0 lg:my-4 ">
         <div className="w-[18%] lg:w-[201px] flex flex-col items-center">
           <div className=" rounded-full p-1 lg:p-2  border-[2px] lg:border-[2.5px] border-[#D75337] mb-2 lg:mb-4 hover:bg-primary-base transition-colors duration-300">
             <div className="bg-[#FFF1EC] p-1.5 lg:p-3 rounded-full">
@@ -221,12 +221,12 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
       </div>
 
       {/*third section */}
-      <div className="relative z-20 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-32 h-full w-full max-w-screen-xl mx-auto px-4 md:px-6 lg:px-0 py-4 my-2 lg:my-8 lg:mb-[52px]">
+      <div className="relative z-20 flex flex-col lg:flex-row justify-between items-center gap-7 lg:gap-32 h-full w-full max-w-screen-xl mx-auto px-3 md:px-6 lg:px-0 py-3 my-2 lg:my-4 lg:mb-[44px]">
         <div className="flex-shrink-0 w-full lg:w-1/2">
           <PropertyImageCarousel porpertyImages={propertyImages} />
         </div>
-        <div className="flex-1 ">
-          <h3 className="text-black font-medium text-[24px] leading-7 mb-4">
+        <div className="flex-1 w-full max-w-[600px]">
+          <h3 className="text-black font-medium text-[19px] md:text-xl lg:text-[24px] leading-7 mb-3 md:mb-4">
             Project Details
           </h3>
           <div className="border border-[#D4D4D4] rounded-[10px]">
@@ -234,10 +234,10 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
               ([property, [value, icon]], index) => (
                 <div
                   key={index}
-                  className="flex justify-between items-center py-3 px-5 border-b border-[#D4D4D4] last:border-none"
+                  className="flex justify-between items-center px-2.5 py-2.5 md:py-3 md:px-5 border-b border-[#D4D4D4] last:border-none"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-[#F4EFF5] flex items-center justify-center rounded-full w-[38px] h-[38px] overflow-hidden">
+                  <div className="flex items-center gap-2 md:gap-4">
+                    <div className="bg-[#F4EFF5] flex items-center justify-center rounded-full w-[34px] h-[34px] md:w-[38px] md:h-[38px] overflow-hidden">
                       <Image
                         src={icon}
                         alt={`${property} icon`}
@@ -246,7 +246,9 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
                         className="w-5 h-5"
                       />
                     </div>
-                    <span className="text-[#313131] text-lg">{property}</span>
+                    <span className="text-[#313131]  md:text-lg">
+                      {property}
+                    </span>
                   </div>
                   <div className="text-black text-lg">{value}</div>
                 </div>
@@ -260,7 +262,7 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
       <FloorPlan modelName={model.name} floors={model.floors} />
 
       {/*Fifth section - View in 3D */}
-      <div className="w-full bg-[#F6F3F6] pt-8 pb-16">
+      <div className="w-full bg-[#F6F3F6] pt-2 pb-8 lg:pt-8 lg:pb-16">
         <View3D model={model} />
 
         <Carousel3d images={carouselImages} />
