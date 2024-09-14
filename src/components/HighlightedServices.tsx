@@ -139,14 +139,18 @@ const HighlightedServices = (props: Props) => {
             className="w-10 md:w-[200px] lg:w-[350px]"
           ></Image>
         </div>
-        <p
-          className={`${oregano.className} relative text-xl lg:text-2xl leading-7 mb-1.5 lg:mb-2 flex text-[#454545]`}
-        >
-          <CgQuote className="text-primary-base relative -top-3 -right-1 w-6 h-6 lg:w-8 lg:h-8" />{" "}
-          What we build today makes all the difference{" "}
-          <span className="text-primary-base ml-1.5">tomorrow.</span>
-          <CgQuote className="text-primary-base relative -top-3 right-1 w-6 h-6 lg:w-8 lg:h-8" />
-        </p>
+
+        <div className="flex w-fit relative">
+          <CgQuote className=" text-primary-base relative -top-1 lg:-top-3 -right-1 w-4 h-4  md:w-6 md:h-6 lg:w-8 lg:h-8" />
+          <p
+            className={`${oregano.className} mx-auto text-center text-xl md:text-xl lg:text-2xl leading-7 mb-1.5 lg:mb-2 text-[#454545]`}
+          >
+            What we build today makes all the difference{" "}
+            <span className="text-primary-base">tomorrow.</span>
+          </p>
+          <CgQuote className=" text-primary-base relative -top-1 lg:-top-3 right-1 w-4 h-4  md:w-6 md:h-6  lg:w-8 lg:h-8" />
+        </div>
+
         <p className="text-sm lg:text-base mb-6 lg:mb-10 max-w-[55ch] lg:max-w-[70ch] mx-auto font-light text-center text-[#636363]">
           Our wide selection of{" "}
           <span className="font-medium">wooden based</span> home, resorts, Cafe,
@@ -167,7 +171,7 @@ const HighlightedServices = (props: Props) => {
                   key={index}
                   className="flex-none w-1/2 lg:w-1/3 px-2 lg:px-4 mb-4 lg:mb-0"
                 >
-                  <div className="bg-white rounded-xl overflow-hidden flex flex-col ">
+                  <div className="bg-white  rounded-xl overflow-hidden flex flex-col ">
                     <div className="lg:flex-shrink-0 h-1/2 overflow-hidden">
                       <Image
                         src={service.image}

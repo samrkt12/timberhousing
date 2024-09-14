@@ -261,7 +261,7 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
 
       {/*Fifth section - View in 3D */}
       <div className="w-full bg-[#F6F3F6] pt-8 pb-16">
-        {/* <View3D model={model} /> */}
+        <View3D model={model} />
 
         <Carousel3d images={carouselImages} />
       </div>

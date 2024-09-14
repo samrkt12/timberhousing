@@ -90,14 +90,14 @@ const Approach = (props: Props) => {
             return (
               <div
                 key={index}
-                className="flex flex-col items-start rounded-xl overflow-hidden"
+                className="flex flex-col items-start rounded-xl overflow-hidden max-w-[250px] md:max-w-[300px]"
               >
                 <Image
                   src={data.image}
                   alt={data.title}
                   width={500}
                   height={300}
-                  className="w-full max-h-[150px] lg:max-h-[190px] mb-1.5 lg:mb-3 rounded-lg object-cover"
+                  className="w-full max-h-[100px] md:max-h-[170px] lg:max-h-[190px] mb-1.5 lg:mb-3 rounded-lg object-cover"
                 />
                 <h3 className="text-base lg:text-lg font-semibold mb-0.5 lg:mb-1.5">
                   {data.title}

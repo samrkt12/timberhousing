@@ -56,8 +56,8 @@ const ModelsPage = () => {
           />
         </div>
         <div className="absolute inset-0 bg-[rgba(38,33,41,0.91)] z-10"></div>
-        <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-12 pt-4 pb-3">
-          <div className="flex items-center gap-2">
+        <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-4 md:px-6 lg:px-12 pt-4 pb-3">
+          <div className="flex items-center gap-1 lg:gap-2">
             <Link
               href="/"
               className="text-sm leading-7 hover:text-primary-light transition-colors duration-300"
@@ -72,7 +72,7 @@ const ModelsPage = () => {
               3D Design Tour
             </Link>
           </div>
-          <div className="w-full my-16">
+          <div className="w-full my-10  lg:my-16">
             <div className="flex items-center justify-center mb-2.5">
               <Image
                 src="/vector1.png"
@@ -81,7 +81,7 @@ const ModelsPage = () => {
                 alt="vector line"
                 className="w-10 md:w-[200px] lg:w-[350px]"
               />
-              <h2 className="mx-1 text-[42px] leading-[46px] font-semibold whitespace-nowrap">
+              <h2 className="mx-1 text-2xl lg:text-[42px] lg:leading-[46px] font-semibold whitespace-nowrap">
                 3D Design <span className="text-primary-base">Tour</span>
               </h2>
               <Image
@@ -92,23 +92,23 @@ const ModelsPage = () => {
                 className="w-10 md:w-[200px] lg:w-[350px]"
               />
             </div>
-            <p className="text-xl mx-auto font-light text-center">
+            <p className="text-sm lg:text-xl mx-auto font-light text-center">
               Wood is a high-performance building material
             </p>
           </div>
         </div>
       </div>
-      <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-12 py-10">
-        <div className="mb-7">
-          <h3 className="text-[#212121] font-medium text-2xl">
+      <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-4 md:px-6 lg:px-12 py-4 lg:py-10">
+        <div className="mb-3 lg:mb-7">
+          <h3 className="text-[#212121] font-medium text-lg md:text-xl lg:text-2xl">
             Top Results{" "}
-            <span className="font-normal text-whites-grey text-lg leading-6">
+            <span className="font-normal text-whites-grey text-sm md:text-base lg:text-lg md:leading-6">
               ({modelsData.length} Designs)
             </span>
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
           {currentModels.map((model) => (
             <Model3dCard key={model.id} model={model} />
           ))}
@@ -120,7 +120,7 @@ const ModelsPage = () => {
             disabled={currentPage === 1}
             className="p-2 rounded-full bg-secondary-base text-white disabled:opacity-50"
           >
-            <IoIosArrowBack size={32} />
+            <IoIosArrowBack className="w-6 h-6 md:w-8 md:h-8" />
           </button>
 
           <div className="flex space-x-2">
@@ -129,7 +129,7 @@ const ModelsPage = () => {
                 <button
                   key={number}
                   onClick={() => setCurrentPage(number)}
-                  className={`p-4 w-10 h-10 flex items-center justify-center rounded-full ${
+                  className={`p-4 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full ${
                     currentPage === number
                       ? "bg-primary-base text-white"
                       : "bg-gray-200"
@@ -146,7 +146,7 @@ const ModelsPage = () => {
             disabled={currentPage === totalPages}
             className="p-2 rounded-full bg-secondary-base text-white disabled:opacity-50"
           >
-            <IoIosArrowForward size={32} />
+            <IoIosArrowForward className="w-6 h-6 md:w-8 md:h-8" />
           </button>
         </div>
       </div>

@@ -10,7 +10,7 @@ const Contact3d = (props: Props) => {
       <div className="relative z-20 bg-[#4A3456] w-full h-full flex items-center lg:rounded-2xl max-w-[1160px] mx-auto px-2.5 md:px-4 lg:px-4 overflow-visible lg:overflow-hidden ">
         <div className="w-full h-full flex items-center py-6 lg:py-8">
           {/* Text Content */}
-          <div className="relative z-10 flex flex-col my-auto items-start max-w-[20rem] md:max-w-[32rem] lg:max-w-[42rem] p-2 lg:p-6 text-whites-light">
+          <div className="relative z-10 flex flex-col my-auto items-start max-w-[15rem] md:max-w-[32rem] lg:max-w-[42rem] p-2 lg:p-6 text-whites-light">
             <h3 className="md:text-2xl lg:text-3xl lg:leading-9 font-medium mb-1.5 md:mb-3 lg:mb-6">
               India-
               <span className="mr-1 lg:mr-2 text-primary-base">
@@ -43,7 +43,7 @@ const Contact3d = (props: Props) => {
         </div>
 
         {/* Background with 3D House */}
-        <div className="scale-x-[-1] lg:scale-x-1 absolute w-[630px] h-[580px] md:w-[750px] md:h-[640px] lg:w-[900px] lg:h-[850px] -right-64 lg:-right-32 lg:-top-[53%]">
+        <div className="scale-x-[-1] lg:scale-x-1 absolute w-[580px] h-[580px] md:w-[750px] md:h-[640px] lg:w-[900px] lg:h-[850px] -right-80 lg:-right-32 lg:-top-[53%]">
           <Image
             src="/house3d.png"
             alt="3D House"

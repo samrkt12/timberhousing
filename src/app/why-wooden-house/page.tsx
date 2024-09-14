@@ -289,8 +289,8 @@ const WhyWoodenHouse = () => {
             </p>
           </div>
 
-          <div className="relative">
-            <p className="absolute text-[#1B1B1B] tracking-wider font-medium text-lg lg:text-xl leading-8  left-1/2 transform -translate-x-1/2 top-8">
+          <div className="relative ">
+            <p className="absolute text-center w-full text-[#1B1B1B] tracking-wide md:tracking-wider font-medium md:text-lg lg:text-xl leading-8  left-1/2 transform -translate-x-1/2 top-6 md:top-8 lg:top-10">
               Construction Times
             </p>
             <Image
