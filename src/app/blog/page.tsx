@@ -7,7 +7,7 @@ import blogsData from "@/utils/blogsData";
 import StartToday from "@/components/StartToday";
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const blogsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -158,4 +158,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

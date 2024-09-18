@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { RxDoubleArrowRight } from "react-icons/rx";
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   return (
     <div className="relative w-full overflow-hidden">
       {/*First section */}
@@ -429,4 +429,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

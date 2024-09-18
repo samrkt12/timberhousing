@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const router = useRouter();
   const [value, setValue] = useState<string | undefined>(undefined);
 
@@ -241,4 +241,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

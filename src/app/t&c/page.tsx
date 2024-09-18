@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   return (
     <div className="relative w-full overflow-hidden">
       <div className="relative w-full bg-[#FFE8E3] ">
@@ -190,4 +190,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

@@ -48,7 +48,7 @@ const faqs = [
   },
 ];
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -338,4 +338,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

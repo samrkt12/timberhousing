@@ -20,7 +20,7 @@ const truncateSummary = (summary: string, maxChars: number) => {
     : summary;
 };
 
-const page = ({ params }: BlogDetailsProps) => {
+const Page = ({ params }: BlogDetailsProps) => {
   const blog = blogsData.find((b) => b.id === params.blogId);
 
   if (!blog) {
@@ -168,4 +168,4 @@ const page = ({ params }: BlogDetailsProps) => {
   );
 };
 
-export default page;
+export default Page;
