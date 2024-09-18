@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const ModelsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const modelsPerPage = 4;
+  const modelsPerPage = 10;
   const totalPages = Math.ceil(modelsData.length / modelsPerPage);
 
   const currentModels = modelsData.slice(
@@ -72,14 +72,14 @@ const ModelsPage = () => {
               3D Design Tour
             </Link>
           </div>
-          <div className="w-full my-10  lg:my-16">
+          <div className="w-full my-10 lg:my-16">
             <div className="flex items-center justify-center mb-2.5">
               <Image
                 src="/vector1.png"
                 width={350}
                 height={5}
                 alt="vector line"
-                className="w-10 md:w-[200px] lg:w-[350px]"
+                className="w-16 md:w-[200px] lg:w-[350px]"
               />
               <h2 className="mx-1 text-2xl lg:text-[42px] lg:leading-[46px] font-semibold whitespace-nowrap">
                 3D Design <span className="text-primary-base">Tour</span>
@@ -89,7 +89,7 @@ const ModelsPage = () => {
                 width={350}
                 height={5}
                 alt="vector line"
-                className="w-10 md:w-[200px] lg:w-[350px]"
+                className="w-16 md:w-[200px] lg:w-[350px]"
               />
             </div>
             <p className="text-sm lg:text-xl mx-auto font-light text-center">

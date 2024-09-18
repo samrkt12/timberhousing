@@ -10,7 +10,7 @@ type Props = {};
 
 const Page = (props: Props) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const modelsPerPage = 5;
+  const modelsPerPage = 6;
   const totalPages = Math.ceil(modelsData.length / modelsPerPage);
 
   const currentModels = modelsData.slice(
@@ -19,7 +19,7 @@ const Page = (props: Props) => {
   );
 
   const handleScrollToTop = () => {
-    const firstCard = document.querySelector(".model-card");
+    const firstCard = document.querySelector(".design-card");
     const navbarHeight = document.querySelector("nav")?.offsetHeight || 171;
 
     if (firstCard) {
@@ -46,9 +46,9 @@ const Page = (props: Props) => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden ">
       {/*First section */}
-      <div className="relative w-full text-[#352E39] pb-7">
+      <div className="relative w-full text-[#352E39] pb-3 lg:pb-7">
         <div className="absolute inset-0 z-0 ">
           <Image
             src="/designs-bg.jpg"
@@ -57,10 +57,10 @@ const Page = (props: Props) => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-[rgba(255,255,255,0.4)] to-white/100"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-[rgba(255,255,255,0.4)] to-white/95"></div>
 
-        <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-12 pt-4 pb-0">
-          <div className="flex items-center gap-2">
+        <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-4 md:px-6 lg:px-12 pt-3 lg:pt-4 pb-0">
+          <div className="flex items-center gap-1.5 lg:gap-2">
             <Link
               href="/"
               className="text-sm leading-7 hover:text-primary-light transition-colors duration-300"
@@ -75,7 +75,7 @@ const Page = (props: Props) => {
               Designs
             </Link>
           </div>
-          <div className="w-full my-16">
+          <div className="w-full my-10 lg:my-16">
             <div className="flex items-center justify-center mb-2.5">
               <Image
                 src="/vector1.png"
@@ -84,7 +84,7 @@ const Page = (props: Props) => {
                 alt="vector line"
                 className="w-10 md:w-[200px] lg:w-[350px]"
               />
-              <h2 className="mx-1 text-[42px] leading-[46px] font-semibold whitespace-nowrap">
+              <h2 className="mx-1 text-2xl lg:text-[42px] lg:leading-[46px]  font-semibold whitespace-nowrap">
                 Designs
               </h2>
               <Image
@@ -95,7 +95,7 @@ const Page = (props: Props) => {
                 className="w-10 md:w-[200px] lg:w-[350px]"
               />
             </div>
-            <p className="text-xl mx-auto font-light text-center">
+            <p className="text-sm lg:text-xl mx-auto font-light text-center">
               Wood is a high-performance building material
             </p>
           </div>
@@ -103,11 +103,11 @@ const Page = (props: Props) => {
       </div>
 
       {/*Second section */}
-      <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-12 py-10 pb-0">
+      <div className="relative z-20 flex flex-col h-full w-full max-w-[700px] lg:max-w-screen-xl mx-auto px-4 md:px-6 lg:px-12 lg:pt-4 pb-2">
         <div className="">
-          <h3 className="text-[#212121] font-medium text-2xl">
+          <h3 className="text-[#212121] text-lg md:text-xl lg:text-2xl">
             Top Results{" "}
-            <span className="font-normal text-whites-grey text-lg leading-6">
+            <span className="font-normal text-whites-grey text-sm md:text-base lg:text-lg md:leading-6">
               ({modelsData.length} Designs)
             </span>
           </h3>
@@ -118,7 +118,7 @@ const Page = (props: Props) => {
       {currentModels.map((model, index) => (
         <div
           key={model.id}
-          className={`w-full overflow-hidden  ${
+          className={`w-full overflow-hidden ${
             index % 2 === 0 ? "bg-white" : "bg-[#F6F6F6]"
           } model-card`}
         >
@@ -126,13 +126,13 @@ const Page = (props: Props) => {
         </div>
       ))}
 
-      <div className="flex justify-between items-center  relative z-20  h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-12 py-4 mb-10">
+      <div className="flex justify-between items-center  relative z-20  h-full w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12 py-2 lg:py-4 mb-5 lg:mb-10">
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}
           className="p-2 rounded-full bg-secondary-base text-white disabled:opacity-50"
         >
-          <IoIosArrowBack size={32} />
+          <IoIosArrowBack className="w-6 h-6 md:w-8 md:h-8" />
         </button>
 
         <div className="flex space-x-2">
@@ -140,7 +140,7 @@ const Page = (props: Props) => {
             <button
               key={number}
               onClick={() => setCurrentPage(number)}
-              className={`p-4 w-10 h-10 flex items-center justify-center rounded-full ${
+              className={`w-9 h-9 md:w-10 md:h-10 p-4 flex items-center justify-center rounded-full ${
                 currentPage === number
                   ? "bg-primary-base text-white"
                   : "bg-gray-200"
@@ -156,7 +156,7 @@ const Page = (props: Props) => {
           disabled={currentPage === totalPages}
           className="p-2 rounded-full bg-secondary-base text-white disabled:opacity-50"
         >
-          <IoIosArrowForward size={32} />
+          <IoIosArrowForward className="w-6 h-6 md:w-8 md:h-8" />
         </button>
       </div>
     </div>

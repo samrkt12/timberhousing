@@ -80,7 +80,7 @@ const WhyWoodenHouse = () => {
                 width={350}
                 height={5}
                 alt="vector line"
-                className="w-10 md:w-[200px] lg:w-[350px]"
+                className="w-12 md:w-[200px] lg:w-[350px]"
               />
             </div>
             <p className="text-sm lg:text-xl mx-auto font-light text-center">
@@ -455,7 +455,7 @@ const WhyWoodenHouse = () => {
               alt="Image 2"
               width={400}
               height={400}
-              className="w-full max-w-[400px] h-full max-h-[260px]  lg:order-1  object-cover rounded-lg"
+              className="w-full max-w-[400px] h-full max-h-[260px]  lg:order-1   lg:object-cover rounded-lg"
             />
           </div>
 
@@ -626,7 +626,7 @@ const WhyWoodenHouse = () => {
               alt="solidity image"
               width={600}
               height={600}
-              className="w-[540px] h-[350px] object-cover"
+              className="w-[540px] h-auto lg:h-[350px] object-contain lg:object-cover"
             ></Image>
           </div>
 
@@ -710,7 +710,7 @@ const WhyWoodenHouse = () => {
                 alt="thermal image"
                 width={600}
                 height={600}
-                className="w-[540px] h-[400px]  object-cover rounded-[10px]"
+                className="w-full lg:w-[540px] h-auto lg:h-[400px]  object-cover rounded-[10px]"
               />
             </div>
           </div>
@@ -753,7 +753,7 @@ const WhyWoodenHouse = () => {
               alt="forest image"
               width={600}
               height={600}
-              className="w-[640px] h-full object-cover"
+              className="w-full lg:w-[640px] h-auto lg:h-full object-cover"
             ></Image>
           </div>
 

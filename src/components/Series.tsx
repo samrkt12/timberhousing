@@ -1,7 +1,7 @@
 import Image from "next/image";
 import WoodenCottageSeries from "./WoodenCottageSeries";
-import WoodenVillaSeries from "./WoodenVillaSeries";
 import WoodenHouseSeries from "./WoodenHouseSeries";
+import WoodenCafeSeries from "./WoodenCafeSeries";
 
 type Props = {};
 
@@ -34,7 +34,7 @@ const Series = (props: Props) => {
           perspective.
         </p>
         <WoodenCottageSeries />
-        <WoodenVillaSeries />
+        <WoodenCafeSeries />
         <WoodenHouseSeries />
       </div>
     </section>

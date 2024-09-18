@@ -2,8 +2,7 @@ import { notFound } from "next/navigation";
 import modelsData, { Category } from "@/utils/modelsData";
 import Image from "next/image";
 import Link from "next/link";
-import { IoIosArrowForward, IoIosCheckmarkCircle } from "react-icons/io";
-import { Md3dRotation } from "react-icons/md";
+import { IoIosArrowForward } from "react-icons/io";
 import Carousel3d from "../../../components/Carousel3d";
 import VideoSection from "@/components/VideoSection";
 import PropertyImageCarousel from "@/components/PropertyImageCarousel";
@@ -12,8 +11,8 @@ import InnerPageContact from "@/components/InnerPageContact";
 import FloorPlan from "@/components/FloorPlan";
 import View3D from "@/components/View3D";
 
-function convertCategoryToSlug(category: Category): string {
-  return category.toLowerCase().replace(/\s+/g, "-");
+function convertCategoryToSlug(category: string): string {
+  return category.toLowerCase().replace(/[\s/]+/g, "-");
 }
 
 interface ModelDetailsProps {
@@ -264,7 +263,6 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
       {/*Fifth section - View in 3D */}
       <div className="w-full bg-[#F6F3F6] pt-2 pb-8 lg:pt-8 lg:pb-16">
         <View3D model={model} />
-
         <Carousel3d images={carouselImages} />
       </div>
 

@@ -23,23 +23,23 @@ const GLTFModelModal: React.FC<GLTFModelModalProps> = ({
   };
 
   return createPortal(
-    <div className="fixed inset-0 bg-black bg-opacity-70 z-[100] flex items-center justify-center">
-      <div className="relative w-full  lg:w-[70%] h-[80%] bg-primary-base rounded-md p-[5px]">
+    <div className="fixed inset-0 bg-black bg-opacity-70 z-[100] flex items-center justify-center px-4 md:px-8 lg:px-12">
+      <div className="relative w-full  max-w-[1100px] h-[350px] lg:h-[70%] max-h-[800px] bg-primary-base rounded-md p-[5px]">
         {/* Close button */}
-        <div className="absolute top-4 right-4 flex gap-6 z-10">
+        <div className="absolute top-4 right-3 lg:right-4 flex gap-3 lg:gap-6 z-10">
           <button
             className={`text-black bg-white font-medium ${
               rotate ? "text-primary-base border-primary-base" : "border-white"
-            } px-2.5 py-1 rounded-full border-[2px] hover:text-primary-base hover:border-primary-base transition-all duration-300`}
+            } px-1.5 md:px-2 lg:px-2.5 py-1 rounded-full border-[2px] hover:text-primary-base hover:border-primary-base transition-all duration-300`}
             onClick={handleRotateClick}
           >
-            <FaSyncAlt className="w-5 h-5" />
+            <FaSyncAlt className="w-4 h-4 lg:w-5 lg:h-5 px-[1px] md:px-0" />
           </button>
           <button
             className="text-black bg-white px-1.5 py-1 rounded-full border-[2px] border-white font-semibold hover:border-primary-base hover:text-primary-base  transition-all duration-300"
             onClick={onClose}
           >
-            <MdClose className="w-7 h-7  " />
+            <MdClose className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7  " />
           </button>
         </div>
         {/* Canvas to render 3D model */}

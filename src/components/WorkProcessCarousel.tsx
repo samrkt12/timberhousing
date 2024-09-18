@@ -17,7 +17,7 @@ type WorkProcessCarouselProps = {
 
 const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ playOnInit: true, delay: 5000, stopOnInteraction: false }),
+    Autoplay({ playOnInit: true, delay: 2000, stopOnInteraction: false }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -118,7 +118,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
       >
         <div className="flex">
           {steps.map((step, index) => (
-            <div className="flex-none w-full text-center p-4 pt-1" key={index}>
+            <div className="flex-none w-full text-center p-4 " key={index}>
               <div className="w-full max-w-[560px] md:w-[560px] h-[300px] md:h-[350px] lg:h-[410px] mx-auto mb-3 md:mb-8 lg:mb-12">
                 <Image
                   src={step.image}

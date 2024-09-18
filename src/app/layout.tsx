@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const lexend = Lexend_Deca({ subsets: ["latin"] });
+const lexend = Lexend_Deca({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "WoodenHousing",

@@ -16,12 +16,16 @@ import { SlInfo } from "react-icons/sl";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 import { CgMenuRightAlt } from "react-icons/cg";
+import useContactHandler from "@/utils/useContactHandler";
+import ContactModal from "./ContactModal";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   const pathname = usePathname();
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const { handleContactClick, isModalOpen, closeModal } = useContactHandler();
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -45,21 +49,28 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <nav className="sticky z-[100] inset-x-0 top-0 w-full backdrop-blur-lg transition-all border-b border-whites-base bg-whites-light/75 ">
+      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
+      <nav className="navbar sticky z-[100] inset-x-0 top-0 w-full backdrop-blur-lg transition-all border-b border-whites-base bg-whites-light/75 ">
         {/* Navbar content */}
-        <div className="bg-secondary-darkest p-3 text-center hidden lg:block">
-          <p className="text-whites-light uppercase text-base font-light leading-5 tracking-wider">
+        <div className="bg-secondary-darkest p-2.5 text-center hidden lg:block">
+          <p className="text-whites-light uppercase text-base font-light leading-5 tracking-widest">
             Welcome to <span className="font-medium">woodenhousing</span>
           </p>
         </div>
 
-        <div className=" h-20 flex w-full max-w-screen-xl mx-auto items-center justify-between  md:px-7 lg:px-8 px-6">
+        <div className="h-[3.5rem] md:h-[4rem] lg:h-[78px] flex w-full max-w-screen-xl mx-auto items-center justify-between  md:px-7 lg:px-8  px-4 ">
           {/* Logo */}
           <Link
             href="/"
             className="flex items-end justify-center gap-1 md:gap-2"
           >
-            <Image src="/logo.png" width={40} height={40} alt="logo" />
+            <Image
+              src="/logo.png"
+              width={40}
+              height={40}
+              alt="logo"
+              className="w-8 h-8 lg:w-9 lg:h-9"
+            />
             <p className="flex flex-col lg:flex-row uppercase text-base lg:text-[21px] font-bold leading-4 lg:leading-7 lg:tracking-wider lg:mb-[2px]">
               <span>wooden</span>
               <span>housing</span>
@@ -117,34 +128,22 @@ const Navbar = (props: Props) => {
                   Wooden House
                 </a>
                 <a
-                  href="/wooden-villa"
+                  href="/wooden-pergola-gazebo"
                   className="block text-base leading-5 py-[10px] border-b border-whites-base last:border-0 hover:text-primary-base transition-colors duration-200"
                 >
-                  Wooden Villa
+                  Wooden Pergola/Gazebo
                 </a>
                 <a
-                  href="/wooden-pergola"
+                  href="/wooden-cafe"
                   className="block text-base leading-5 py-[10px] border-b border-whites-base last:border-0 hover:text-primary-base transition-colors duration-200"
                 >
-                  Wooden Pergola
-                </a>
-                <a
-                  href="/wooden-gazebo"
-                  className="block text-base leading-5 py-[10px] border-b border-whites-base last:border-0 hover:text-primary-base transition-colors duration-200"
-                >
-                  Wooden Gazebo
-                </a>
-                <a
-                  href="/terrace-wooden-house"
-                  className="block text-base leading-5 py-[10px] border-b border-whites-base last:border-0 hover:text-primary-base transition-colors duration-200"
-                >
-                  Terrace Wooden House
+                  Wooden Cafe
                 </a>
               </div>
             </div>
 
             <Link
-              href="#"
+              href="/about-us"
               className={`py-2 relative transition-colors duration-300 ${
                 pathname === "/about-us"
                   ? "text-primary-base after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-full after:bg-primary-dark"
@@ -154,7 +153,7 @@ const Navbar = (props: Props) => {
               About Us
             </Link>
             <Link
-              href="#"
+              href="/blog"
               className={`py-2 relative transition-colors duration-300 ${
                 pathname === "/blog"
                   ? "text-primary-base after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-full after:bg-primary-dark"
@@ -167,7 +166,10 @@ const Navbar = (props: Props) => {
 
           {/* Contact Us Button */}
           <div className="hidden lg:flex">
-            <Button className="bg-primary-base hover:bg-primary-dark text-whites-light px-[24px] py-[8px] font-normal text-lg leading-[22px] tracking-wide">
+            <Button
+              onClick={handleContactClick}
+              className="bg-primary-base hover:bg-primary-dark text-whites-light px-[24px] py-[8px] font-normal text-lg leading-[22px] tracking-wide"
+            >
               Contact Us
             </Button>
           </div>
@@ -179,7 +181,7 @@ const Navbar = (props: Props) => {
               aria-label="Open navigation"
               className="text-whites-darkest focus:outline-none"
             >
-              <CgMenuRightAlt className="w-9 h-9" />
+              <CgMenuRightAlt className="w-8 h-8 md:w-9 md:h-9" />
             </button>
           </div>
         </div>
@@ -214,6 +216,16 @@ const Navbar = (props: Props) => {
               }`}
             >
               3D design tour
+            </Link>
+            <Link
+              href="/our-projects"
+              className={`py-1.5 relative transition-colors duration-300 ${
+                pathname === "/our-projects"
+                  ? "text-primary-base after:absolute after:left-1/2 after:bottom-0 after:h-[3px] after:w-[50%] after:bg-primary-dark after:translate-x-[-50%]"
+                  : "hover:text-primary-base after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary-base after:transition-all after:duration-500 hover:after:w-[50%] hover:after:translate-x-[-50%]"
+              }`}
+            >
+              Our projects
             </Link>
           </div>
         </div>
@@ -254,7 +266,7 @@ const Navbar = (props: Props) => {
             <p className="text-[#282828] text-xs">Home</p>
           </Link>
           <Link
-            href="#"
+            href="/contact"
             onClick={toggleNav}
             className="bg-[#FFF1EC] w-[30%] flex flex-col items-center justify-between rounded-lg py-4 gap-1 cursor-pointer"
           >
@@ -262,7 +274,7 @@ const Navbar = (props: Props) => {
             <p className="text-[#282828] text-xs">Contact Us</p>
           </Link>
           <Link
-            href="#"
+            href="/faq"
             onClick={toggleNav}
             className="bg-[#FFF1EC] w-[30%] flex flex-col items-center justify-between rounded-lg py-4 gap-1 cursor-pointer"
           >
@@ -316,7 +328,7 @@ const Navbar = (props: Props) => {
             </Link>
 
             <Link
-              href="/wooden-pergola"
+              href="/wooden-pergola-gazebo"
               onClick={toggleNav}
               className="bg-whites-light text-[#1A1A1A] text-[12px] leading-[13px] w-[23%] rounded-md overflow-hidden shadow-md cursor-pointer"
             >
@@ -330,12 +342,12 @@ const Navbar = (props: Props) => {
                 ></Image>
               </div>
               <div className="py-2 flex items-center justify-center w-full font-medium">
-                <p className="text-center max-w-[10ch]">Wooden Pergola</p>
+                <p className="text-center max-w-[10ch]">Pergola/ Gazebo</p>
               </div>
             </Link>
 
             <Link
-              href="/wooden-villa"
+              href="/wooden-cafe"
               onClick={toggleNav}
               className="bg-whites-light text-[#1A1A1A] text-[12px] leading-[13px] w-[23%] rounded-md overflow-hidden shadow-md cursor-pointer"
             >
@@ -368,10 +380,20 @@ const Navbar = (props: Props) => {
           <Link
             href="/why-wooden-house"
             onClick={toggleNav}
-            className="w-full bg-whites-light text-[#282828] p-[10px] py-3 flex justify-between items-center rounded-[6px]  shadow-md cursor-pointer"
+            className="w-full bg-whites-light text-[#282828] p-[10px] py-3 flex justify-between items-center rounded-[6px]  shadow-md cursor-pointer mb-2.5"
           >
             <p className="text-[13px] font-medium tracking-wide leading-4">
               Why wooden house?
+            </p>
+            <IoIosArrowForward className="text-primary-base " />
+          </Link>
+          <Link
+            href="/our-projects"
+            onClick={toggleNav}
+            className="w-full bg-whites-light text-[#282828] p-[10px] py-3 flex justify-between items-center rounded-[6px]  shadow-md cursor-pointer"
+          >
+            <p className="text-[13px] font-medium tracking-wide leading-4">
+              Our projects
             </p>
             <IoIosArrowForward className="text-primary-base " />
           </Link>
@@ -386,7 +408,8 @@ const Navbar = (props: Props) => {
             Meet our architect & start planning!{" "}
           </p>
           <Link
-            href="#"
+            href="/contact"
+            onClick={toggleNav}
             className="flex items-center gap-1 text-[#6D2794] font-semibold"
           >
             Book now
@@ -404,7 +427,11 @@ const Navbar = (props: Props) => {
           </div>
         </div>
 
-        <div className="w-full mb-2.5 rounded-md py-[12px] p-[10px] overflow-hidden flex items-center justify-between bg-[#FFF1EC]">
+        <Link
+          href="/referral-policy"
+          onClick={toggleNav}
+          className="w-full mb-2.5 rounded-md py-[12px] p-[10px] overflow-hidden flex items-center justify-between bg-[#FFF1EC]"
+        >
           <div className="flex gap-2 items-center">
             <IoPersonAddOutline className="text-primary-base w-[18px] h-[18px] " />
             <p className="font-medium text-[#282828] text-sm ml-2">
@@ -415,7 +442,7 @@ const Navbar = (props: Props) => {
             </button>
           </div>
           <IoIosArrowForward className="text-primary-base" />
-        </div>
+        </Link>
 
         <div className="w-full mb-2.5 rounded-md overflow-hidden">
           <Link
@@ -429,20 +456,30 @@ const Navbar = (props: Props) => {
             </div>
             <IoIosArrowForward className="text-primary-base" />
           </Link>
-          <div className="flex items-center justify-between py-3 px-2.5 bg-[#FFF1EC] border-b border-[#F4D6CB]">
+          <Link
+            href="/about-us"
+            onClick={toggleNav}
+            className="flex items-center justify-between py-3 px-2.5 bg-[#FFF1EC] border-b border-[#F4D6CB]"
+          >
             <div className="flex gap-2 items-center">
               <SlInfo className="text-primary-base w-[18px] h-[18px] " />
-              <p className="font-medium text-[#282828] text-sm ml-2">About</p>
+              <p className="font-medium text-[#282828] text-sm ml-2">
+                About us
+              </p>
             </div>
             <IoIosArrowForward className="text-primary-base" />
-          </div>
-          <div className="flex items-center justify-between py-3 px-2.5 bg-[#FFF1EC] ">
+          </Link>
+          <Link
+            href="/blog"
+            onClick={toggleNav}
+            className="flex items-center justify-between py-3 px-2.5 bg-[#FFF1EC] "
+          >
             <div className="flex gap-2 items-center">
               <IoNewspaperOutline className="text-primary-base w-[18px] h-[18px] " />
               <p className="font-medium text-[#282828] text-sm ml-2">Blog</p>
             </div>
             <IoIosArrowForward className="text-primary-base" />
-          </div>
+          </Link>
         </div>
 
         <div className="w-full flex items-center justify-around text-primary-base mt-6">

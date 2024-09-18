@@ -52,18 +52,18 @@ const WoodenCottageSeries = (props: Props) => {
     <div className="w-full px-0 md:px-4 lg:px-16 mb-6 lg:mb-10">
       <div className="flex items-end justify-between w-full">
         <div className="flex flex-col">
-          <h3 className="uppercase font-extrabold text-secondary-darkest text-xl lg:text-2xl leading-8 lg:leading-9">
-            Wooden Cottages{" "}
-            <span className="ml-1 h-full uppercase text-primary-base text-lg lg:text-xl leading-5 lg:leading-6 font-extrabold inline-flex items-center">
+          <h3 className="uppercase font-extrabold text-secondary-darkest sm:text-lg md:text-xl lg:text-2xl leading-7 md:leading-8 lg:leading-9">
+            Wooden Cottage{" "}
+            <span className="ml-1 h-full uppercase text-primary-base text-sm sm:text-base md:text-lg lg:text-xl leading-5 lg:leading-6 font-extrabold inline-flex items-center">
               Series
             </span>
           </h3>
-          <p className="text-secondary-darkest font-medium  lg:text-lg leading-6 lg:leading-8">
+          <p className="text-secondary-darkest font-medium text-sm md:text-base lg:text-lg md:leading-6 lg:leading-8">
             1 Bedroom, Hall and Kitchen (BHK)
           </p>
         </div>
         <Link
-          href="#"
+          href="/wooden-cottage"
           className="text-primary-base lg:text-lg hover:text-primary-dark"
         >
           See all

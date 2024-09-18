@@ -4,6 +4,7 @@ import FeatureCard from "./FeatureCard";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
+
 type Feature = {
   icon: string;
   title: string;
@@ -61,18 +62,38 @@ const features: Feature[] = [
     title: "Modern Design",
     description: "Stylish and futuristic homes.",
   },
-  {
-    icon: "/icons/icon5.png",
-    title: "Modern Design",
-    description: "Stylish and futuristic homes.",
-  },
 ];
+
+const allFeatures = [...features, ...features];
+const firstRow = features.slice(0, features.length / 2);
+const firstRowFeatures = [...firstRow, ...firstRow];
+const secondRow = features.slice(features.length / 2);
+const secondRowFeatures = [...secondRow, ...secondRow];
 
 const WhyChooseUs = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, dragFree: true },
     [AutoScroll({ playOnInit: true, stopOnInteraction: false, startDelay: 0 })]
   );
+
+  const [emblaRefFirstRow] = useEmblaCarousel({ loop: true, dragFree: true }, [
+    AutoScroll({
+      playOnInit: true,
+      stopOnInteraction: false,
+      startDelay: 0,
+      direction: "forward",
+    }),
+  ]);
+
+  const [emblaRefSecondRow] = useEmblaCarousel({ loop: true, dragFree: true }, [
+    AutoScroll({
+      playOnInit: true,
+      stopOnInteraction: false,
+      startDelay: 0,
+      direction: "backward",
+    }),
+  ]);
+
   return (
     <section className="w-full text-center pt-6 lg:pt-8 pb-10 lg:pb-14 overflow-hidden ">
       {/* Heading */}
@@ -101,9 +122,12 @@ const WhyChooseUs = () => {
       </p>
 
       {/* Feature Boxes */}
-      <div className="relative w-full overflow-hidden" ref={emblaRef}>
+      <div
+        className="hidden lg:block relative w-full overflow-hidden"
+        ref={emblaRef}
+      >
         <div className="flex">
-          {features.map((feature, index) => (
+          {allFeatures.map((feature, index) => (
             <FeatureCard
               key={index}
               icon={feature.icon}
@@ -111,6 +135,38 @@ const WhyChooseUs = () => {
               description={feature.description}
             />
           ))}
+        </div>
+      </div>
+
+      {/* Mobile View with Two Rows */}
+      <div className="lg:hidden space-y-2.5">
+        <div className="relative w-full overflow-hidden" ref={emblaRefFirstRow}>
+          <div className="flex">
+            {firstRowFeatures.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div
+          className="relative w-full overflow-hidden"
+          ref={emblaRefSecondRow}
+        >
+          <div className="flex">
+            {secondRowFeatures.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -11,17 +11,17 @@
   content: "";
   z-index: 80;
   position: absolute;
-  bottom: -1px;
+  bottom: -2px;
   left: 0;
   width: 100%;
-  height: 45px;
+  height: 40px;
   background-color: white;
   clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 
 @media (max-width: 768px) {
   .diagonal-section::before {
-    height: 20px;
+    height: 22px;
   }
 }
 
@@ -101,4 +101,71 @@
 
 .yarl__thumbnails_container {
   background-color: transparent !important;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #4a3456;
+  border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-button {
+  display: none;
+}
+
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: #4a3456 transparent;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #4a3456 transparent;
+}
+
+@keyframes revolve3 {
+  0% {
+    transform: rotateX(0deg);
+  }
+  33.33% {
+    transform: rotateX(120deg);
+  }
+  66.66% {
+    transform: rotateX(240deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.animate-3 {
+  animation: revolve3 4s ease-in-out infinite;
+}
+
+.cube-spinner {
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+
+.cube-spinner-text {
+  display: inline-block;
+  position: relative;
+  height: 52px;
+}
+@media screen and (max-width: 1024px) {
+  .cube-spinner-text {
+    height: 40px;
+  }
+}
+
+.cube-face {
+  position: absolute;
+  height: 100%;
+  backface-visibility: hidden;
 }

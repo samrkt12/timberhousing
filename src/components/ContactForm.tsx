@@ -9,7 +9,7 @@ type Props = {};
 const ContactForm = (props: Props) => {
   const [value, setValue] = useState<string | undefined>(undefined);
   return (
-    <div className=" bg-whites-light px-5 lg:px-7 py-3.5 lg:py-5 rounded-xl border-[3px] border-primary-light max-w-[800px] mx-auto lg:mx-0">
+    <div className=" bg-whites-light px-5 lg:px-7 py-3.5 lg:py-5 rounded-xl border-[3px] border-primary-light  max-w-[800px] mx-auto lg:mx-0">
       <h3 className="flex flex-row justify-center text-[19px] leading-8 md:leading-9 lg:text-2xl lg:leading-10 font-medium text-whites-darkest mb-4 text-center">
         Book
         <span className="mx-2 text-primary-base">free</span>

@@ -7,6 +7,8 @@ import { RiFullscreenFill } from "react-icons/ri";
 import {
   IoIosArrowDropupCircle,
   IoIosArrowDropdownCircle,
+  IoIosArrowDropleftCircle,
+  IoIosArrowDroprightCircle,
 } from "react-icons/io";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -49,6 +51,24 @@ const DesignsCarousel = ({ model, index }: Props) => {
     if (!embla) return;
     setPrevBtnEnabled(embla.canScrollPrev());
     setNextBtnEnabled(embla.canScrollNext());
+  }, [embla]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (!embla) return;
+
+      const isLargeScreen = window.matchMedia("(min-width: 1024px)").matches;
+      const axis = isLargeScreen ? "y" : "x"; // Use 'y' for large screens, 'x' for small screens
+      embla.reInit({ axis });
+    };
+
+    // Initialize on load and on resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, [embla]);
 
   useEffect(() => {
@@ -96,18 +116,18 @@ const DesignsCarousel = ({ model, index }: Props) => {
         />
       )}
 
-      <div className="relative z-20 flex flex-col  w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-12 py-10 overflow-hidden">
+      <div className="relative z-20 flex flex-col  w-full lg:max-w-screen-xl mx-auto px-4 md:px-8 lg:px-12 py-5 lg:py-7 max-w-[715px] overflow-hidden">
         {/* Card Content */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center mb-3 lg:mb-6">
           <div>
-            <h3 className="text-2xl mb-1 font-semibold text-[#352E39]">
+            <h3 className="text-xl lg:text-2xl lg:mb-1 font-semibold text-[#352E39]">
               {model.name}
             </h3>
-            <p className="  text-[#6D6D6D] font-light leading-6">
+            <p className="  text-[#6D6D6D] font-light text-sm md:text-base leading-[22px] md:leading-6">
               {model.description}
             </p>
           </div>
-          <div className="flex gap-4">
+          <div className="hidden lg:flex gap-4">
             <Link href={`/models/${model.id}`} className="group">
               <button className="py-[7px] px-[30px] rounded-[62px] border border-[#B0B0B0] text-[#4D4453] font-medium text-[17px] leading-8 group-hover:text-primary-base transition-colors duration-300 group-hover:border-primary-base">
                 Learn More
@@ -132,11 +152,11 @@ const DesignsCarousel = ({ model, index }: Props) => {
 
         {/* Carousel Section */}
         <div
-          className={`w-full flex flex-col justify-between lg:flex-row gap-6 mb-6 lg:h-[512px] ${
+          className={`w-full flex flex-col  justify-between lg:flex-row gap-3 lg:gap-6 mb-3 lg:mb-6 lg:h-[512px] ${
             index % 2 !== 0 ? "lg:flex-row-reverse" : ""
           }`}
         >
-          <div className="relative w-[74%] lg:h-full overflow-hidden rounded-[12px] lg:flex-shrink-0">
+          <div className="relative w-full lg:w-[74%] h-auto lg:h-full overflow-hidden rounded-[12px] lg:flex-shrink-0">
             <Image
               src={images[0]}
               alt="model main image"
@@ -144,13 +164,13 @@ const DesignsCarousel = ({ model, index }: Props) => {
               height={600}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/0 to-black/75" />
-            <div className="absolute z-30 bottom-3 w-full  flex items-center justify-between px-7 pb-4 cursor-default">
-              <div className="text-whites-light font-medium text-[22px] leading-8 border-l-[4px] border-white px-2.5">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/0 to-black/75 pointer-events-none" />
+            <div className="absolute z-30 bottom-1.5 lg:bottom-3 w-full  flex items-center justify-between px-4 md:px-6 lg:px-7 pb-2.5 md:pb-4 cursor-default">
+              <div className="text-whites-light font-medium text-lg md:text-xl lg:text-[22px] md:leading-7 leading-8 border-l-[4px] border-white px-1.5 md:px-2.5">
                 Exterior view
               </div>
               <a onClick={handleFullscreenClick} className="cursor-pointer">
-                <RiFullscreenFill className="w-8 h-8 text-white hover:scale-125 transition-all duration-300" />
+                <RiFullscreenFill className="w-7 h-7 lg:w-8 lg:h-8 text-white hover:scale-125 transition-all duration-300" />
               </a>
             </div>
           </div>
@@ -165,11 +185,11 @@ const DesignsCarousel = ({ model, index }: Props) => {
               onMouseUp={handleMouseUp}
               onMouseLeave={handleMouseLeave}
             >
-              <div className="flex lg:flex-col gap-4 h-[512px]">
+              <div className="flex flex-row  lg:flex-col gap-4 h-auto lg:h-[512px]">
                 {images.map((img, imgIndex) => (
                   <div
                     key={imgIndex}
-                    className="z-12  bg-white rounded-[10px] shadow-lg relative"
+                    className="z-12 w-[200px] sm:w-[280px] md:w-[310px] lg:w-full flex-shrink-0 h-auto bg-white rounded-[10px] shadow-lg relative"
                   >
                     <div className="w-full h-full relative">
                       <Image
@@ -190,8 +210,8 @@ const DesignsCarousel = ({ model, index }: Props) => {
 
             {/* Arrows for vertical scrolling */}
             <button
-              className={`absolute -top-5 left-1/2 transform -translate-x-1/2 bg-white rounded-full ${
-                prevBtnEnabled ? "" : "hidden"
+              className={`hidden lg:block absolute -top-5 left-1/2 transform -translate-x-1/2 bg-white rounded-full ${
+                prevBtnEnabled ? "lg:block" : "lg:hidden"
               }`}
               onClick={scrollPrev}
               disabled={!prevBtnEnabled}
@@ -199,15 +219,58 @@ const DesignsCarousel = ({ model, index }: Props) => {
               <IoIosArrowDropupCircle className="w-10 h-10 text-primary-base hover:text-primary-dark transition-colors duration-200" />
             </button>
             <button
-              className={`absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-white rounded-full ${
-                nextBtnEnabled ? "" : "hidden"
+              className={`hidden lg:block  absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-white rounded-full ${
+                nextBtnEnabled ? "lg:block" : "lg:hidden"
               }`}
               onClick={scrollNext}
               disabled={!nextBtnEnabled}
             >
               <IoIosArrowDropdownCircle className="w-10 h-10 text-primary-base hover:text-primary-dark transition-colors duration-200" />
             </button>
+
+            {/* Arrows for horizontal scrolling */}
+            <button
+              className={`lg:hidden absolute top-1/2 -left-4 transform -translate-y-1/2 bg-white rounded-full ${
+                prevBtnEnabled ? "block" : "hidden"
+              }`}
+              onClick={scrollPrev}
+              disabled={!prevBtnEnabled}
+            >
+              <IoIosArrowDropleftCircle className="w-8 h-8 text-primary-base hover:text-primary-dark transition-colors duration-200" />
+            </button>
+
+            <button
+              className={`lg:hidden absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white rounded-full ${
+                nextBtnEnabled ? "block" : "hidden"
+              }`}
+              onClick={scrollNext}
+              disabled={!nextBtnEnabled}
+            >
+              <IoIosArrowDroprightCircle className="w-8 h-8 text-primary-base hover:text-primary-dark transition-colors duration-200" />
+            </button>
           </div>
+        </div>
+
+        <div className="flex lg:hidden items-center justify-between gap-3 sm:px-4 lg:px-0">
+          <Link href={`/models/${model.id}`} className="group w-1/2">
+            <button className="py-[5px] lg:py-[7px]  w-full px-5 lg:px-[30px] rounded-[62px] border border-[#B0B0B0] text-[#4D4453] font-medium lg:text-[17px] leading-7 lg:leading-8 group-hover:text-primary-base transition-colors duration-300 group-hover:border-primary-base">
+              Learn More
+            </button>
+          </Link>
+          <button className="bg-[#4D4453] w-1/2 text-whites-light py-[5.5px] lg:py-[7px] px-5 lg:px-[30px]  rounded-[62px] font-medium text-[15px] lg:text-[17px] leading-7 lg:leading-8 flex gap-2 items-center justify-center group ">
+            <div className="w-5 h-5 lg:w-6 lg:h-6">
+              <Image
+                src="/wapp-icon.png"
+                alt="whastapp icon"
+                width={80}
+                height={80}
+                className="w-full h-full group-hover:scale-110 transition-transform duration-300"
+              ></Image>
+            </div>
+            <p className="group-hover:text-green-400 transition-colors duration-300">
+              WhatsApp Us
+            </p>
+          </button>
         </div>
       </div>
     </>

@@ -6,10 +6,11 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Image from "next/image";
 import Link from "next/link";
 import ServiceModelCard from "@/components/ServiceModelCard";
+import { RxDash } from "react-icons/rx";
 
 const Page = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const modelsPerPage = 8;
+  const modelsPerPage = 10;
 
   const [selectedFloors, setSelectedFloors] = useState<number | null>(null);
   const [selectedBedrooms, setSelectedBedrooms] = useState<number | null>(null);
@@ -92,8 +93,8 @@ const Page = () => {
           />
         </div>
         <div className="absolute inset-0 bg-[rgba(38,33,41,0.91)] z-10"></div>
-        <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-12 pt-4 pb-3">
-          <div className="flex items-center gap-2">
+        <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-4 md:px-6 lg:px-12 pt-4 pb-3">
+          <div className="flex items-center gap-1.5 lg:gap-2">
             <Link
               href="/"
               className="text-sm leading-7 hover:text-primary-light transition-colors duration-300"
@@ -108,16 +109,16 @@ const Page = () => {
               Wooden House Series
             </Link>
           </div>
-          <div className="w-full my-8 mb-16">
+          <div className="w-full my-5 lg:my-8 mb-10 lg:mb-16">
             <div className="flex items-center justify-center mb-2.5">
               <Image
                 src="/vector1.png"
                 width={350}
                 height={5}
                 alt="vector line"
-                className="w-10 md:w-[200px] lg:w-[350px]"
+                className="w-16 md:w-[200px] lg:w-[350px]"
               />
-              <h2 className="mx-1 text-[42px] leading-[46px] font-semibold whitespace-nowrap">
+              <h2 className="mx-1 text-2xl lg:text-[42px] lg:leading-[46px]  font-semibold whitespace-nowrap">
                 Wooden <span className="text-primary-base">House</span>
               </h2>
               <Image
@@ -125,28 +126,28 @@ const Page = () => {
                 width={350}
                 height={5}
                 alt="vector line"
-                className="w-10 md:w-[200px] lg:w-[350px]"
+                className="w-16 md:w-[200px] lg:w-[350px]"
               />
             </div>
-            <p className="text-xl mx-auto font-light text-center">
+            <p className="text-sm lg:text-xl mx-auto font-light text-center">
               Wood is a high-performance building material
             </p>
           </div>
         </div>
       </div>
 
-      <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-12 py-10">
-        <div className="relative min-h-[150px] bg-whites-light shadow-lg -top-24 rounded-[10px] flex flex-col lg:flex-row lg:justify-evenly lg:items-center px-4 py-2">
-          <div className="mb-4 lg:mb-0">
-            <h4 className="text-xl leading-6 text-[#1D1D1D] font-medium mb-4">
+      <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-3 sm:px-4 md:px-8 lg:px-12 py-10">
+        <div className="relative  bg-whites-light shadow-lg -top-24 rounded-[10px] flex flex-col lg:flex-row lg:justify-evenly lg:items-center px-3 lg:px-4 py-2 lg:py-6">
+          <div className="mb-2 lg:mb-0">
+            <h4 className="md:text-lg lg:text-xl leading-6 text-[#1D1D1D] font-semibold mb-1 md:mb-1.5 lg:mb-4">
               No. of Floors
             </h4>
             <div className="flex space-x-4">
-              {[1, 1.5, 2].map((floor) => (
+              {[1, 2, 3].map((floor) => (
                 <button
                   key={floor}
                   onClick={() => handleFloorsFilter(floor)}
-                  className={`px-3  py-1 border-[2px] rounded-lg ${
+                  className={`px-[8px] md:px-2.5 lg:px-3 py-[1px] md:py-0.5 lg:py-1 border-[2px] rounded-lg text-sm md:text-base ${
                     selectedFloors === floor
                       ? "bg-primary-base text-white  border-primary-dark"
                       : "bg-whites-light  border-[#A0A0A0]"
@@ -158,8 +159,8 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="mb-4 lg:mb-0">
-            <h4 className="text-xl leading-6 text-[#1D1D1D] font-medium mb-4">
+          <div className="mb-2 lg:mb-0">
+            <h4 className="md:text-lg lg:text-xl leading-6 text-[#1D1D1D] font-semibold mb-1 md:mb-1.5 lg:mb-4">
               No. of Bedrooms
             </h4>
             <div className="flex space-x-4">
@@ -167,7 +168,7 @@ const Page = () => {
                 <button
                   key={bedroom}
                   onClick={() => handleBedroomsFilter(bedroom)}
-                  className={`px-3 py-1 border-[2px] rounded-lg ${
+                  className={`px-[8px] md:px-2.5 lg:px-3 py-[1px] md:py-0.5 lg:py-1 border-[2px] rounded-lg text-sm md:text-base ${
                     selectedBedrooms === bedroom
                       ? "bg-primary-base text-white border-primary-dark"
                       : "bg-whites-light  border-[#A0A0A0] "
@@ -179,13 +180,13 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="mb-4 lg:mb-0">
-            <h4 className="text-xl leading-6 text-[#1D1D1D] font-medium mb-4">
+          <div className="mb-2 lg:mb-0">
+            <h4 className="md:text-lg lg:text-xl leading-6 text-[#1D1D1D] font-semibold mb-1 md:mb-1.5 lg:mb-4">
               Gross Living Area
             </h4>
-            <div className="flex space-x-4">
+            <div className="flex items-center lg:space-x-0.5">
               <select
-                className="p-2 border-[2px] border-[#A0A0A0]  rounded-lg outline-none"
+                className="p-1 lg:p-2 border-[2px] border-[#A0A0A0] text-sm md:text-base  rounded-lg outline-none"
                 value={minLivingArea || ""}
                 onChange={(e) => setMinLivingArea(Number(e.target.value))}
               >
@@ -198,8 +199,9 @@ const Page = () => {
                   </option>
                 ))}
               </select>
+              <RxDash className="text-primary-base w-8 h-8" />
               <select
-                className="p-2  border-[2px] border-[#A0A0A0]  rounded-lg disabled:cursor-not-allowed outline-none"
+                className="p-1 lg:p-2  border-[2px] border-[#A0A0A0] text-sm md:text-base rounded-lg disabled:cursor-not-allowed outline-none"
                 value={maxLivingArea || ""}
                 onChange={(e) => setMaxLivingArea(Number(e.target.value))}
                 disabled={!minLivingArea}
@@ -217,21 +219,21 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="-mt-[3.5rem] mb-7">
-          <h3 className="text-[#212121] font-medium text-2xl">
+        <div className="-mt-[5rem] lg:-mt-[3.5rem] mb-3 lg:mb-7">
+          <h3 className="text-[#212121] font-medium text-lg md:text-xl lg:text-2xl">
             Results{" "}
-            <span className="font-normal text-whites-grey text-lg leading-6">
+            <span className="font-normal text-whites-grey text-sm md:text-base lg:text-lg leading-6">
               ({filteredModels.length} Designs)
             </span>
           </h3>
         </div>
 
         {currentModels.length === 0 ? (
-          <div className="w-full text-center text-2xl text-whites-grey py-10">
+          <div className="w-full text-center text-lg md:text-xl lg:text-2xl text-whites-grey py-4 pt-8 lg:py-10">
             No models found matching your criteria.
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-12">
             {currentModels.map((model) => (
               <ServiceModelCard key={model.id} model={model} />
             ))}
@@ -239,13 +241,13 @@ const Page = () => {
         )}
 
         {filteredModels.length > 0 ? (
-          <div className="flex justify-between items-center mt-8">
+          <div className="flex justify-between items-center mt-6 lg:mt-8">
             <button
               onClick={handlePrevPage}
               disabled={currentPage === 1}
               className="p-2 rounded-full bg-secondary-base text-white disabled:opacity-50"
             >
-              <IoIosArrowBack size={32} />
+              <IoIosArrowBack className="w-6 h-6 md:w-8 md:h-8" />
             </button>
 
             <div className="flex items-center space-x-2">
@@ -256,7 +258,7 @@ const Page = () => {
                     setCurrentPage(index + 1);
                     handleScrollToTop();
                   }}
-                  className={`p-4 w-10 h-10 flex items-center justify-center rounded-full ${
+                  className={`p-4 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full ${
                     currentPage === index + 1
                       ? "bg-primary-base text-white"
                       : "bg-gray-200"
@@ -272,7 +274,7 @@ const Page = () => {
               disabled={currentPage === totalPages || totalPages === 0}
               className="p-2 rounded-full bg-secondary-base text-white disabled:opacity-50"
             >
-              <IoIosArrowForward size={32} />
+              <IoIosArrowForward className="w-6 h-6 md:w-8 md:h-8" />
             </button>
           </div>
         ) : (

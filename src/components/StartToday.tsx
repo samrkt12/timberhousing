@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Button from "./UI/Button";
+import useContactHandler from "@/utils/useContactHandler";
+import ContactModal from "./ContactModal";
 
 type Props = {};
 
 const StartToday = (props: Props) => {
+  const { handleContactClick, isModalOpen, closeModal } = useContactHandler();
   return (
     <section className="relative w-full overflow-hidden lg:py-5 px-4 ">
       <div className=" absolute top-0 left-0 w-[45%] h-full">
@@ -52,10 +56,14 @@ const StartToday = (props: Props) => {
           perfection. Our best design team also assist you in creating that
           customized home you’ve been dreaming of.
         </p>
-        <Button className="bg-primary-base text-white text-lg lg:text-xl font-medium  px-7 py-2 lg:py-4 rounded-[10px] shadow-xl hover:bg-primary-dark transition-colors duration-200">
+        <Button
+          onClick={handleContactClick}
+          className="bg-primary-base text-white text-lg lg:text-xl font-medium  px-7 py-2 lg:py-4 rounded-[10px] shadow-xl hover:bg-primary-dark transition-colors duration-200"
+        >
           Contact Us Now
         </Button>
       </div>
+      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };

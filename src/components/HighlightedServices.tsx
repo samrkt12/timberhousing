@@ -15,42 +15,30 @@ type Props = {};
 const servicesData = [
   {
     image: "/service1.jpg",
-    title: "Wooden Cottages",
+    title: "Wooden Cottage",
     description:
       "Cozy, handcrafted wooden cottages designed for comfort and natural charm.",
-    link: "#",
+    link: "/wooden-cottage",
   },
   {
     image: "/service2.jpg",
-    title: "Wooden Villas",
+    title: "Wooden House",
     description:
       "Luxurious wooden villas offering elegance and sustainability in every detail.",
-    link: "#",
+    link: "/wooden-house",
   },
   {
     image: "/service3.jpg",
-    title: "Wooden Pergola",
+    title: "Pergola/Gazebo",
     description:
       "Elegant wooden pergolas, perfect for enhancing your outdoor living spaces.",
-    link: "#",
+    link: "/wooden-pergola-gazebo",
   },
   {
     image: "/service1.jpg",
-    title: "Gazebos",
-    description: "Elegant gazebos perfect for gardens and outdoor spaces.",
-    link: "#",
-  },
-  {
-    image: "/service2.jpg",
-    title: "Villas",
-    description: "Exclusive villas with top-notch architectural design.",
-    link: "#",
-  },
-  {
-    image: "/service3.jpg",
-    title: "Post-Construction Support",
-    description: "Comprehensive support and services after project completion.",
-    link: "#",
+    title: "Wooden Cafe",
+    description: "Elegant cafes perfect for gardens and outdoor spaces.",
+    link: "/wooden-cafe",
   },
 ];
 
@@ -165,11 +153,11 @@ const HighlightedServices = (props: Props) => {
             className="overflow-hidden"
             ref={emblaIsActive ? emblaRef : null}
           >
-            <div className="flex gap-0 flex-wrap lg:flex-nowrap">
+            <div className="flex justify-center lg:justify-start gap-x-3 md:gap-x-6 lg:gap-x-0 lg:mx-0  flex-wrap lg:flex-nowrap">
               {servicesData.map((service, index) => (
                 <div
                   key={index}
-                  className="flex-none w-1/2 lg:w-1/3 px-2 lg:px-4 mb-4 lg:mb-0"
+                  className="flex-none w-[48%] lg:w-1/3 lg:px-4 mb-4 lg:mb-0 max-w-[400px] lg:max-w-full"
                 >
                   <div className="bg-white  rounded-xl overflow-hidden flex flex-col ">
                     <div className="lg:flex-shrink-0 h-1/2 overflow-hidden">
@@ -224,18 +212,6 @@ const HighlightedServices = (props: Props) => {
           >
             <IoIosArrowDroprightCircle className="w-12 h-12 text-primary-base hover:text-primary-dark transition-colors duration-200" />
           </button>
-        </div>
-
-        <div className="hidden lg:flex justify-center mt-6">
-          {[...Array(2)].map((_, index) => (
-            <button
-              key={index}
-              onClick={() => scrollToIndex(index)}
-              className={`w-3 h-3 rounded-full mx-1 ${
-                selectedIndex === index ? "bg-primary-base" : "bg-gray-400"
-              }`}
-            ></button>
-          ))}
         </div>
       </div>
     </section>
