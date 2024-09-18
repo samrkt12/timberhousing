@@ -21,6 +21,7 @@ const truncateSummary = (summary: string, maxChars: number) => {
 
 const Page = ({ params }: BlogDetailsProps) => {
   const blog = blogsData.find((b) => b.id === params.blogId);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   if (!blog) {
     return notFound();
@@ -29,8 +30,6 @@ const Page = ({ params }: BlogDetailsProps) => {
   const smallSummary = truncateSummary(blog.summary, 80);
   const mediumSummary = truncateSummary(blog.summary, 130);
   const largeSummary = truncateSummary(blog.summary, 180);
-
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const handleScroll = (index: number) => {
     const section = sectionRefs.current[index];
