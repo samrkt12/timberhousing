@@ -66,11 +66,11 @@ const Page = (props: Props) => {
             prices may substantially increase from the initial quote value.
           </li>
           <li className=" leading-6 md:leading-7 lg:leading-9">
-            Based on Customer's initial discussion with the HomeLane
+            {` Based on Customer's initial discussion with the HomeLane
             representatives, Customer shall make an initial payment of either 5%
             of quote value or INR 25,000, whichever is higher, for booking the
             order with HomeLane, subject to terms and conditions mentioned
-            herein, if applicable.
+            herein, if applicable.`}
           </li>
           <li className=" leading-6 md:leading-7 lg:leading-9">
             The Price structure has 4 Installments:
@@ -114,10 +114,10 @@ const Page = (props: Props) => {
             conditions.
           </li>
           <li className=" leading-6 md:leading-7 lg:leading-9">
-            For booking an order with HomeLane, Customer quote value should
+            {`For booking an order with HomeLane, Customer quote value should
             include a minimum of INR 1,50,000 of "woodwork". In case of the
             quote value having woodwork less than INR 1,50,000, the same shall
-            not be accepted.
+            not be accepted.`}
           </li>
           <li className=" leading-6 md:leading-7 lg:leading-9">
             The initial quote value provided by HomeLane at the time of order
@@ -132,12 +132,12 @@ const Page = (props: Props) => {
             Installment is received and approved by HomeLane.
           </li>
           <li className=" leading-6 md:leading-7 lg:leading-9">
-            Between First Installment and Third Installment payment stage of
+            {`Between First Installment and Third Installment payment stage of
             Customer order brand partnered categories such as appliances, lights
             and loose furniture etc. are subject to price fluctuation and may
             not be available due to stock issues from the manufacturer’s end. In
             such cases, the Customer will have an option to choose the other
-            available products.
+            available products.`}
           </li>
           <li className=" leading-6 md:leading-7 lg:leading-9">
             We have categorised the work of HomeLane as interior solutions and
