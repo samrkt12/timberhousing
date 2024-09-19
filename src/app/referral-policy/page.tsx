@@ -1,4 +1,7 @@
 "use client";
+import ContactModal from "@/components/ContactModal";
+import Button from "@/components/UI/Button";
+import useContactHandler from "@/utils/useContactHandler";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -50,6 +53,7 @@ const faqs = [
 
 const Page = (props: Props) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const { handleContactClick, isModalOpen, closeModal } = useContactHandler();
 
   const toggleFAQ = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -316,9 +320,8 @@ const Page = (props: Props) => {
             className="object-contain "
           />
         </div>
-
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-whites-light py-10 lg:py-20">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-whites-light py-10 lg:py-20 pb-5 lg:pb-5">
           <p className="text-lg lg:text-xl mb-1 lg:mb-1.5 text-[#242424]">
             So what are you waiting for?
           </p>
@@ -332,8 +335,15 @@ const Page = (props: Props) => {
             perfection. Our best design team also assist you in creating that
             customized home you’ve been dreaming of.
           </p>
+          <Button
+            onClick={handleContactClick}
+            className="bg-primary-base text-white text-lg lg:text-xl font-medium  px-7 py-2 lg:py-4 rounded-[10px] shadow-xl hover:bg-primary-dark transition-colors duration-200"
+          >
+            Contact Us Now
+          </Button>
         </div>
       </section>
+      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

@@ -18,6 +18,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { CgMenuRightAlt } from "react-icons/cg";
 import useContactHandler from "@/utils/useContactHandler";
 import ContactModal from "./ContactModal";
+import { FaYoutube } from "react-icons/fa";
 
 type Props = {};
 
@@ -394,11 +395,11 @@ const Navbar = (props: Props) => {
         </div>
 
         <div className="relative w-full mb-2.5 rounded-md bg-gradient-to-b from-[#F9F1FD] to-[#EBDDF4] p-2.5 overflow-hidden">
-          <h4 className="mb-[3px] text-[15px] leading-[20px] font-medium text-[#262626]">
+          <h4 className="mb-[3px] text-[15px] leading-[20px] font-medium text-[#262626] relative z-[100]">
             Book a <span className="text-[#6D2794] font-semibold">free</span>{" "}
             design consulation{" "}
           </h4>
-          <p className="text-[#6D557B] mb-1 text-sm">
+          <p className="text-[#6D557B] mb-1 text-sm relative z-[100]">
             Meet our architect & start planning!{" "}
           </p>
           <Link
@@ -410,7 +411,7 @@ const Navbar = (props: Props) => {
             <IoIosArrowForward />
           </Link>
 
-          <div className="absolute -right-3 -top-8 z-1 w-[130px] h-[160px]">
+          <div className="absolute z-[40] -right-3 -top-8 z-1 w-[130px] h-[160px]">
             <Image
               src="/pana.png"
               alt="pana"
@@ -478,9 +479,9 @@ const Navbar = (props: Props) => {
 
         <div className="w-full flex items-center justify-around text-primary-base mt-6">
           <div className="h-1 w-[50px] border-b-[2px] border-whites-base"></div>
-          <div className="flex gap-8">
+          <div className="flex gap-8 items-center">
             <Link href="#">
-              <FaWhatsapp className="w-6 h-6" />
+              <FaYoutube className="w-7 h-7" />
             </Link>
             <Link href="#">
               <BsInstagram className="w-6 h-6" />

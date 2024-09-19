@@ -133,7 +133,7 @@ const Page = ({ params }: BlogDetailsProps) => {
             }}
             className="mb-3 lg:mb-4"
           >
-            <h3 className="text-[#1E1E1E] text-sm md:text-xl lg:text-[22px] lg:leading-8 font-medium mb-2 lg:mb-3.5 underline">
+            <h3 className="text-[#1E1E1E] text-sm md:text-xl lg:text-[22px] lg:leading-8 font-medium mb-2 lg:mb-3.5">
               {section.heading}
             </h3>
             {section.content.map((paragraph, i) => (

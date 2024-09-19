@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { IoMdMail } from "react-icons/io";
@@ -60,7 +60,7 @@ const Page = (props: Props) => {
               type="text"
               id="firstName"
               placeholder="Satyam"
-              className="w-full px-1.5 py-1.5 bg-[#F6F6F6] border border-[#D2D2D2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
+              className="w-full px-1.5 py-1.5 bg-[#F6F6F6] border border-[#D2D2D2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base capitalize"
             />
           </div>
           <div className="flex-1">
@@ -71,7 +71,7 @@ const Page = (props: Props) => {
               type="text"
               id="lastName"
               placeholder="Singh"
-              className="w-full px-1.5 py-1.5 bg-[#F6F6F6] border border-[#D2D2D2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
+              className="w-full px-1.5 py-1.5 bg-[#F6F6F6] border border-[#D2D2D2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base capitalize"
             />
           </div>
         </div>
@@ -224,7 +224,7 @@ const Page = (props: Props) => {
         </div>
         <div className="flex gap-6 pl-0.5 items-center mt-4 ">
           <Link href="#">
-            <FaWhatsapp className="w-7 h-7 text-[#4B325A]" />
+            <FaYoutube className="w-7 h-7 text-[#4B325A]" />
           </Link>
           <Link href="#">
             <BsInstagram className="w-7 h-7 text-[#4B325A]" />

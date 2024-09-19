@@ -32,7 +32,7 @@ const ContactForm = (props: Props) => {
           <input
             type="text"
             placeholder="Satyam S."
-            className="w-full text-sm md:text-base px-2 py-3 bg-[#F8F8F8] rounded-lg  focus:outline-primary-base"
+            className="w-full text-sm md:text-base px-2 py-3 bg-[#F8F8F8] rounded-lg  focus:outline-primary-base capitalize"
           />
         </div>
 

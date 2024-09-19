@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { GrFormClose } from "react-icons/gr";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -86,7 +86,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 type="text"
                 id="firstName"
                 placeholder="Satyam"
-                className="w-full px-2 py-1.5 text-lg bg-[#F6F6F6] border border-[#D2D2D2] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-primary-base"
+                className="w-full px-2 py-1.5 text-lg bg-[#F6F6F6] border border-[#D2D2D2] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-primary-base  capitalize"
               />
             </div>
             <div className="flex-1">
@@ -97,7 +97,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 type="text"
                 id="lastName"
                 placeholder="Singh"
-                className="w-full px-2 py-1.5 text-lg bg-[#F6F6F6] border border-[#D2D2D2] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-primary-base"
+                className="w-full px-2 py-1.5 text-lg bg-[#F6F6F6] border border-[#D2D2D2] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-primary-base  capitalize"
               />
             </div>
           </div>
@@ -266,7 +266,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             </div>
             <div className="flex gap-[22px] justify-between items-center mt-4 ">
               <Link href="#">
-                <FaWhatsapp className="w-10 h-10 text-[#4B325A]" />
+                <FaYoutube className="w-10 h-10 text-[#4B325A]" />
               </Link>
               <Link href="#">
                 <BsInstagram className="w-10 h-10 text-[#4B325A]" />
