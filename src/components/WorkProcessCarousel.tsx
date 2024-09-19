@@ -69,21 +69,21 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
           className="w-10 md:w-[200px] lg:w-[350px]"
         />
       </div>
-      <div className="relative flex justify-between items-center z-20 my-5 lg:mt-7 px-3 md:px-6 lg:px-0">
+      <div className="relative flex justify-center lg:justify-between items-center z-20 my-5 lg:mt-7 gap-2  md:px-6 lg:px-0 ">
         {steps.map((step, index) => (
           <div
             key={index}
             className="flex flex-col items-center lg:h-[115px] lg:w-[140px]"
           >
             <div
-              className={`relative z-20 cursor-pointer w-fit px-2 md:px-3.5 lg:px-5 py-1.5 lg:py-3 flex items-center justify-center rounded-full border-[2px] border-[#D75337] transition-colors duration-500 ${
+              className={`relative z-20 cursor-pointer w-fit px-2 md:px-3.5 lg:px-5 py-1 lg:py-3 flex items-center justify-center rounded-full border-[2px] border-[#D75337] transition-colors duration-500 ${
                 selectedIndex >= index
                   ? "bg-[#D75337] text-whites-light"
                   : "bg-whites-light text-[#D75337]"
               }`}
               onClick={() => handleStepClick(index)}
             >
-              <span className=" lg:text-[22px] leading-4 md:leading-[22px] lg:leading-[26px] font-bold">
+              <span className="text-sm lg:text-[22px] leading-4 md:leading-[22px] lg:leading-[26px] font-bold">
                 {index + 1}
               </span>
             </div>
@@ -98,7 +98,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
             </p>
           </div>
         ))}
-        <div className="absolute inset-0 transform translate-y-[46%] lg:translate-y-[21%] z-10 w-[90%] mx-auto">
+        <div className="absolute inset-0 transform translate-y-[46%] lg:translate-y-[21%] z-10 w-[65%] lg:w-[90%] mx-auto">
           <Line
             percent={selectedIndex * (100 / steps.length + 2)}
             strokeWidth={0.5}

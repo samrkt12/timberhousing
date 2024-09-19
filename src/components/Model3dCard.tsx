@@ -50,7 +50,7 @@ const Model3dCard = ({ model }: { model: ModelData }) => {
             <div>
               <Link href={`models/${model.id}`} className="group">
                 <button className="border border-[#B0B0B0] px-2.5 md:px-5 py-[3px] text-sm md:text-base text-[#4D4453] md:leading-8 font-medium rounded-[62px] group-hover:text-primary-base transition-colors duration-300 group-hover:border-primary-base">
-                  Floor plan
+                  Floor Plan
                 </button>
               </Link>
             </div>
