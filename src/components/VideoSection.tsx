@@ -39,7 +39,7 @@ const VideoSection = ({ src }: VideoSectionProps) => {
   return (
     <>
       <section
-        className="w-full max-h-[800px] relative bg-[#F6F3F6] flex items-center justify-center overflow-hidden  lg:pb-16 "
+        className="w-full max-h-[800px] relative  bg-[#F6F3F6] flex items-center justify-center overflow-hidden  lg:pb-16 z-50 "
         onClick={() => setIsLightboxOpen(true)}
       >
         <video

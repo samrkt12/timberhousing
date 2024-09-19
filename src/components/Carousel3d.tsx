@@ -79,18 +79,27 @@ const Carousel3d = ({ images }: Props) => {
   return (
     <div className="w-full">
       {lightboxOpen && (
-        <Lightbox
-          open={lightboxOpen}
-          close={() => setLightboxOpen(false)}
-          index={lightboxIndex}
-          slides={images.map((src) => ({ src }))}
-          render={{ slide: NextJsImage }}
-          plugins={[Fullscreen, Download, Counter, Slideshow, Thumbnails]}
-          counter={{ container: { style: { top: "0", left: "2%" } } }}
-          slideshow={{ ref: slideshowRef }}
-          thumbnails={{ ref: thumbnailsRef }}
-          zoom={{ ref: zoomRef }}
-        />
+        <>
+          <div className="fixed inset-0 bg-gray-700 bg-opacity-92 flex items-center justify-center overflow-y-auto z-[100]" />
+          <Lightbox
+            open={lightboxOpen}
+            close={() => setLightboxOpen(false)}
+            index={lightboxIndex}
+            slides={images.map((src) => ({ src }))}
+            render={{ slide: NextJsImage }}
+            plugins={[Fullscreen, Download, Counter, Slideshow, Thumbnails]}
+            counter={{ container: { style: { top: "0", left: "2%" } } }}
+            slideshow={{ ref: slideshowRef }}
+            thumbnails={{
+              ref: thumbnailsRef,
+              border: 0,
+              width: 120,
+              height: 70,
+              borderRadius: 18,
+            }}
+            zoom={{ ref: zoomRef }}
+          />
+        </>
       )}
       <div className="relative w-full mt-4 md:mt-7 lg:mt-10">
         <div

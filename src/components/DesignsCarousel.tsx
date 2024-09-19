@@ -111,7 +111,13 @@ const DesignsCarousel = ({ model, index }: Props) => {
           plugins={[Fullscreen, Download, Counter, Slideshow, Thumbnails]}
           counter={{ container: { style: { top: "0", left: "2%" } } }}
           slideshow={{ ref: slideshowRef }}
-          thumbnails={{ ref: thumbnailsRef }}
+          thumbnails={{
+            ref: thumbnailsRef,
+            border: 0,
+            width: 120,
+            height: 70,
+            borderRadius: 18,
+          }}
           zoom={{ ref: zoomRef }}
         />
       )}

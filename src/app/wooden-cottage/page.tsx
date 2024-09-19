@@ -12,7 +12,6 @@ const Page = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const modelsPerPage = 10;
 
-  const [selectedFloors, setSelectedFloors] = useState<number | null>(null);
   const [selectedBedrooms, setSelectedBedrooms] = useState<number | null>(null);
   const [minLivingArea, setMinLivingArea] = useState<number | null>(null);
   const [maxLivingArea, setMaxLivingArea] = useState<number | null>(null);
@@ -22,9 +21,6 @@ const Page = () => {
   );
 
   const filteredModels = villaModels.filter((model) => {
-    const matchesFloors = selectedFloors
-      ? model.floorCount === selectedFloors
-      : true;
     const matchesBedrooms = selectedBedrooms
       ? model.bedroomCount === selectedBedrooms
       : true;
@@ -32,7 +28,7 @@ const Page = () => {
       (!minLivingArea || model.grossLivingArea >= minLivingArea) &&
       (!maxLivingArea || model.grossLivingArea <= maxLivingArea);
 
-    return matchesFloors && matchesBedrooms && matchesLivingArea;
+    return matchesBedrooms && matchesLivingArea;
   });
 
   const totalPages = Math.ceil(filteredModels.length / modelsPerPage);
@@ -71,11 +67,7 @@ const Page = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedFloors, selectedBedrooms, minLivingArea, maxLivingArea]);
-
-  const handleFloorsFilter = (floor: number) => {
-    setSelectedFloors(selectedFloors === floor ? null : floor);
-  };
+  }, [selectedBedrooms, minLivingArea, maxLivingArea]);
 
   const handleBedroomsFilter = (bedroom: number) => {
     setSelectedBedrooms(selectedBedrooms === bedroom ? null : bedroom);
@@ -138,27 +130,6 @@ const Page = () => {
 
       <div className="relative z-20 flex flex-col h-full w-full max-w-screen-xl mx-auto px-3 sm:px-4 md:px-8 lg:px-12 py-10">
         <div className="relative  bg-whites-light shadow-lg -top-24 rounded-[10px] flex flex-col lg:flex-row lg:justify-evenly lg:items-center px-3 lg:px-4 py-2 lg:py-6">
-          <div className="mb-2 lg:mb-0">
-            <h4 className="md:text-lg lg:text-xl leading-6 text-[#1D1D1D] font-semibold mb-1 md:mb-1.5 lg:mb-4">
-              No. of Floors
-            </h4>
-            <div className="flex space-x-4">
-              {[1, 2, 3].map((floor) => (
-                <button
-                  key={floor}
-                  onClick={() => handleFloorsFilter(floor)}
-                  className={`px-[8px] md:px-2.5 lg:px-3 py-[1px] md:py-0.5 lg:py-1 border-[2px] rounded-lg text-sm md:text-base ${
-                    selectedFloors === floor
-                      ? "bg-primary-base text-white  border-primary-dark"
-                      : "bg-whites-light  border-[#A0A0A0]"
-                  }`}
-                >
-                  {floor}
-                </button>
-              ))}
-            </div>
-          </div>
-
           <div className="mb-2 lg:mb-0">
             <h4 className="md:text-lg lg:text-xl leading-6 text-[#1D1D1D] font-semibold mb-1 md:mb-1.5 lg:mb-4">
               No. of Bedrooms

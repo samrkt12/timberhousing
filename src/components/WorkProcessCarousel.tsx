@@ -50,7 +50,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
 
   return (
     <div className="relative w-full max-w-screen-xl mx-auto mb-5 lg:mb-16">
-      <div className="flex items-center justify-center my-6 md:my-8 lg:mt-[48px] lg:mb-[42px]">
+      <div className="flex items-center justify-center my-6 md:my-8 lg:mt-10 lg:mb-[0px]">
         <Image
           src="/vector1.png"
           width={350}
@@ -69,7 +69,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
           className="w-10 md:w-[200px] lg:w-[350px]"
         />
       </div>
-      <div className="relative flex justify-between items-center z-20 mt-5 md:my-8 lg:my-10 px-3 md:px-6 lg:px-0">
+      <div className="relative flex justify-between items-center z-20 my-5 lg:mt-7 px-3 md:px-6 lg:px-0">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -88,7 +88,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
               </span>
             </div>
             <p
-              className={`text-base mt-3 max-w-[20ch] hidden lg:block text-center ${
+              className={`text-base mt-1 max-w-[20ch] hidden lg:block text-center ${
                 selectedIndex >= index
                   ? "text-[#161616] font-medium"
                   : "text-[#696969]"
@@ -119,7 +119,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
         <div className="flex">
           {steps.map((step, index) => (
             <div className="flex-none w-full text-center p-4 " key={index}>
-              <div className="w-full max-w-[560px] md:w-[560px] h-[300px] md:h-[350px] lg:h-[410px] mx-auto mb-3 md:mb-8 lg:mb-12">
+              <div className="w-full max-w-[560px] md:w-[560px] h-[300px] md:h-[350px] lg:h-[380px] mx-auto mb-3 md:mb-8 lg:mb-12">
                 <Image
                   src={step.image}
                   alt={`Step ${index + 1}`}
@@ -131,13 +131,13 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
               <div className="relative mx-auto text-left w-fit px-6 lg:px-0">
                 <div className="relative z-30 h-[120px]">
                   <h2 className="text-[#161616] text-lg md:text-xl lg:text-2xl leading-6 font-medium mb-1.5 lg:mb-[10px]">
-                    {index + 1}. {step.title}
+                    {step.title}
                   </h2>
                   <p className="lg:text-lg text-[#434343] max-w-[60ch] font-light">
                     {step.description}
                   </p>
                 </div>
-                <span className="absolute left-[-25%] lg:left-[-48%] bottom-[-20%] lg:bottom-[-35%] transform translate-x-1/2 text-[#F2F2F2] text-[130px] lg:text-[190px] leading-[200px] lg:leading-[240px] font-semibold z-10">
+                <span className="absolute left-[-25%] lg:left-[-48%] bottom-[-20%] lg:bottom-[-35%] transform translate-x-1/2 text-[#F2F2F2] text-[130px] lg:text-[180px] leading-[200px] lg:leading-[240px] font-semibold z-10">
                   {`0${index + 1}`}
                 </span>
               </div>

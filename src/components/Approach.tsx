@@ -9,28 +9,24 @@ const approachData = [
     title: "Kiln Dried Wood",
     description:
       "Kiln-drying removes up to 90% of moisture, preventing decay and killing pests, thus extending wooden life.",
-    learnMoreLink: "#",
   },
   {
     image: "/approach2.jpg",
     title: "Tongue & Groove",
     description:
       "The tongue and groove joint is a strong, edge-to-edge wood connection used in flooring and paneling. It creates a stable, flat surface and allows natural wood movement without gaps, commonly used in playhouses for added durability.",
-    learnMoreLink: "#",
   },
   {
     image: "/approach3.jpg",
     title: "Post and Beam Construction",
     description:
       "Post and Beam homes are pricier because they require skilled labor and high-quality timber and tongue-and-groove materials.",
-    learnMoreLink: "#",
   },
   {
     image: "/approach4.jpg",
     title: "Wood Cladding",
     description:
       "Wood cladding is a material applied to the outside of a building to protect the exterior from damage. It acts as a shield, keeping your building safe from the elements and extending its lifespan.",
-    learnMoreLink: "#",
   },
 ];
 
@@ -81,12 +77,6 @@ const Approach = (props: Props) => {
 
         <div className="relative z-20 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 gap-y-8 ">
           {approachData.map((data, index) => {
-            const maxLength = 100;
-            const truncatedDescription =
-              data.description.length > maxLength
-                ? data.description.slice(0, maxLength) + "..."
-                : data.description;
-
             return (
               <div
                 key={index}
@@ -103,17 +93,8 @@ const Approach = (props: Props) => {
                   {data.title}
                 </h3>
                 <p className="text-[14px] leading-[18px] lg:text-[15px] lg:leading-[21px] font-light text-left mb-1 lg:mb-5 text-whites-light/75">
-                  {truncatedDescription}
+                  {data.description}
                 </p>
-                <Link
-                  href={data.learnMoreLink}
-                  className="hover:text-primary-light flex items-center group transition-all font-medium lg:text-lg "
-                >
-                  Learn more
-                  <span className="ml-2 transform transition-transform  group-hover:translate-x-1">
-                    <HiOutlineArrowRight />
-                  </span>
-                </Link>
               </div>
             );
           })}

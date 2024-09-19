@@ -52,13 +52,7 @@ const Navbar = (props: Props) => {
       <ContactModal isOpen={isModalOpen} onClose={closeModal} />
       <nav className="navbar sticky z-[100] inset-x-0 top-0 w-full backdrop-blur-lg transition-all border-b border-whites-base bg-whites-light/75 ">
         {/* Navbar content */}
-        <div className="bg-secondary-darkest p-2.5 text-center hidden lg:block">
-          <p className="text-whites-light uppercase text-base font-light leading-5 tracking-widest">
-            Welcome to <span className="font-medium">woodenhousing</span>
-          </p>
-        </div>
-
-        <div className="h-[3.5rem] md:h-[4rem] lg:h-[78px] flex w-full max-w-screen-xl mx-auto items-center justify-between  md:px-7 lg:px-8  px-4 ">
+        <div className="h-[3.5rem] md:h-[4rem] lg:h-[64px] flex w-full max-w-screen-xl mx-auto items-center justify-between  md:px-7 lg:px-8  px-4 ">
           {/* Logo */}
           <Link
             href="/"

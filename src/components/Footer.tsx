@@ -8,6 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import useContactHandler from "@/utils/useContactHandler";
 import ContactModal from "./ContactModal";
@@ -181,7 +182,7 @@ const Footer = (props: Props) => {
                 alt="logo"
                 className="w-full h-full"
               />
-              <p className="flex flex-col items-start justify-end uppercase text-[18px] font-bold leading-5 ">
+              <p className="flex flex-col  items-start justify-end uppercase text-[18px] font-bold leading-5 ">
                 <span>wooden</span>
                 <span>housing</span>
               </p>
@@ -190,16 +191,19 @@ const Footer = (props: Props) => {
             <div>
               <p className="flex text-base font-light items-center tracking-widest">
                 <FaRegCopyright className="mr-1.5 w-5 h-5" />
-                Woodenhousing.com{" "}
-                <span className="font-medium ml-1.5 tracking-wide ">
-                  All rights reserved
-                </span>
+                <Link
+                  href="https://www.woodenhousing.com"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  woodenhousing.com
+                </Link>
               </p>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center">
               <Link href="#">
-                <FaWhatsapp className="w-6 h-6" />
+                <FaYoutube className="w-7 h-7" />
               </Link>
               <Link href="#">
                 <BsInstagram className="w-6 h-6" />
@@ -231,9 +235,9 @@ const Footer = (props: Props) => {
                   <span>housing</span>
                 </p>
               </div>
-              <div className="flex gap-4 pl-1 items-center mt-2">
+              <div className="flex gap-4 pl-0.5 items-center mt-2">
                 <Link href="#">
-                  <FaWhatsapp className="w-5 h-5" />
+                  <FaYoutube className="w-6 h-7" />
                 </Link>
                 <Link href="#">
                   <BsInstagram className="w-5 h-5" />
@@ -277,13 +281,16 @@ const Footer = (props: Props) => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center mt-6">
-            <p className="flex  text-sm font-light items-center tracking-wider md:tracking-widest">
-              <FaRegCopyright className="mr-1.5 w-4 h-4" />
-              Woodenhousing.com{" "}
-              <span className="font-medium ml-1.5  text-sm md:text-base tracking-wider md:tracking-widest ">
-                All rights reserved
-              </span>
+          <div className="flex items-center justify-center relative -left-5 md:left-0 mt-6">
+            <p className="flex  text-sm font-light gap-1.5  items-center tracking-wider md:tracking-widest">
+              <FaRegCopyright className="w-4 h-4" />
+              <Link
+                href="https://www.woodenhousing.com"
+                target="_blank"
+                className="hover:underline"
+              >
+                woodenhousing.com
+              </Link>
             </p>
           </div>
         </div>

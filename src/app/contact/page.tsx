@@ -176,8 +176,8 @@ const Page = (props: Props) => {
             <FaWhatsapp className="w-[3.5rem] h-[3.5rem] text-[#1DAF11]" />
           </div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="absolute w-full h-full rounded-full border-[3px] border-[#1DAF11] opacity-80 animate-ripple"></div>
-            <div className="absolute w-[130%] h-[130%] rounded-full border-[3px] border-[#1DAF11] opacity-40 animate-ripple"></div>
+            <div className="absolute  w-[85%] h-[85%]  rounded-full border-[4px] border-[#1DAF11] opacity-80 animate-ripple"></div>
+            <div className="absolute w-[105%] h-[105%] rounded-full border-[1px] border-[#1DAF11] opacity-40 animate-ripple"></div>
           </div>
         </div>
 
@@ -187,8 +187,8 @@ const Page = (props: Props) => {
             We are online now
             <span className="relative inline-block w-[12px] h-[12px] bg-[#1DAF11] rounded-full ml-2">
               <div className="absolute  inset-0 flex items-center justify-center">
-                <div className="absolute w-[200%] h-[200%] rounded-full border-[2px] border-[#1DAF11] opacity-70 animate-ripple"></div>
-                <div className="absolute w-[300%] h-[300%] rounded-full border-[2px] border-[#1DAF11] opacity-35 animate-ripple"></div>
+                <div className="absolute w-[150%] h-[150%] rounded-full border-[2px] border-[#1DAF11] opacity-70 animate-ripple"></div>
+                <div className="absolute w-[200%] h-[200%] rounded-full border-[2px] border-[#1DAF11] opacity-35 animate-ripple"></div>
               </div>
             </span>
           </h3>
