@@ -30,7 +30,7 @@ const ServiceModelCard = ({ model }: { model: ModelData }) => {
           <div>
             <Link href={`models/${model.id}`} className="group">
               <button className="border border-[#B0B0B0] px-2.5 md:px-3 py-[3px]  text-[13px] md:text-base text-[#4D4453] md:leading-7 lg:leading-8 font-medium rounded-[62px] group-hover:text-primary-base transition-colors duration-300 group-hover:border-primary-base">
-                Learn more
+                Floor plan
               </button>
             </Link>
           </div>

@@ -259,8 +259,8 @@ const DesignsCarousel = ({ model, index }: Props) => {
 
         <div className="flex lg:hidden items-center justify-between gap-3 sm:px-4 lg:px-0">
           <Link href={`/models/${model.id}`} className="group w-1/2">
-            <button className="py-[5px] lg:py-[7px]  w-full px-5 lg:px-[30px] rounded-[62px] border border-[#B0B0B0] text-[#4D4453] font-medium lg:text-[17px] leading-7 lg:leading-8 group-hover:text-primary-base transition-colors duration-300 group-hover:border-primary-base">
-              Learn More
+            <button className="py-[5px] lg:py-[7px]  w-full px-5 lg:px-[30px] rounded-[62px] text-whites-light bg-primary-base font-medium lg:text-[17px] leading-7 lg:leading-8 group-hover:bg-primary-dark transition-colors duration-300 ">
+              Floor plan
             </button>
           </Link>
           <button className="bg-[#4D4453] w-1/2 text-whites-light py-[5.5px] lg:py-[7px] px-5 lg:px-[30px]  rounded-[62px] font-medium text-[15px] lg:text-[17px] leading-7 lg:leading-8 flex gap-2 items-center justify-center group ">
