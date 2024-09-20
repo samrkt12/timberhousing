@@ -3,7 +3,7 @@ export type Blog = {
   title: string;
   summary: string;
   mainImage: string;
-  publishedDate: string; // Added publishedDate
+  publishedDate: string;
   sections: { heading: string; content: string[]; image?: string }[];
 };
 
