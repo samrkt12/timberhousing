@@ -153,17 +153,17 @@ const Carousel3d = ({ images }: Props) => {
             <IoIosArrowDropleftCircle className="w-8 h-8 md:w-10 md:h-10 lg:w-[55px] lg:h-[55px] text-secondary-base rounded-full " />
           </button>
 
-          <div className="flex gap-2">
+          <div className="flex gap-1">
             {images.map((_, index) => (
               <div
                 key={index}
-                className={`px-3 md:px-4 py-0.5 flex items-center rounded-full transition-transform duration-300 mr-2 ${
+                className={`px-2 md:px-3 py-0.5 flex items-center rounded-full transition-transform duration-300 mr-1.5 ${
                   index === selectedIndex
-                    ? "bg-primary-base scale-110 lg:scale-125 text-whites-light"
+                    ? "bg-primary-base scale-105 lg:scale-110 text-whites-light"
                     : "text-[#777777]"
                 }`}
               >
-                <p className="text-sm md:text-xl ">{index + 1}</p>
+                <p className="text-sm md:text-lg ">{index + 1}</p>
               </div>
             ))}
           </div>

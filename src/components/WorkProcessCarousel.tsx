@@ -69,7 +69,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
           className="w-10 md:w-[200px] lg:w-[350px]"
         />
       </div>
-      <div className="relative flex justify-center lg:justify-between items-center z-20 my-5 lg:mt-7 gap-2  md:px-6 lg:px-0 ">
+      <div className="relative flex justify-between items-center z-20 my-5 lg:mt-7  px-10 sm:px-10 md:px-6 lg:px-0 ">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -98,7 +98,7 @@ const WorkProcessCarousel = ({ steps }: WorkProcessCarouselProps) => {
             </p>
           </div>
         ))}
-        <div className="absolute inset-0 transform translate-y-[46%] lg:translate-y-[21%] z-10 w-[65%] lg:w-[90%] mx-auto">
+        <div className="absolute inset-0 transform translate-y-[46%] lg:translate-y-[21%] z-10 w-[72%] sm:w-[80%] md:w-[90%] mx-auto">
           <Line
             percent={selectedIndex * (100 / steps.length + 2)}
             strokeWidth={0.5}
