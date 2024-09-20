@@ -236,20 +236,22 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
               </h4>
               <div className="flex items-center gap-3 mb-2 pl-1">
                 <IoMdMail className="text-[#4B325A] w-5 h-5" />
-                <p>example@gmail.com</p>
+                <p>info@woodenhousing.com</p>
               </div>
               <div className="flex items-center gap-3 mb-2 pl-1">
                 <FaPhoneAlt className="text-[#4B325A] w-5 h-5" />
                 <p className="font-light">
-                  <span className="font-semibold">+91</span> 811818181
+                  <span className="font-semibold">+91</span> 7388476677
                 </p>
               </div>
               <div className="flex items-center gap-3 mb-1 pl-1">
                 <FaLocationDot className="text-[#4B325A] w-5 h-5" />
-                <p className="max-w-[42ch] font-light leading-[20px]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.{" "}
-                </p>
+                <div className="text-[15px]">
+                  <p className="font-light leading-[20px]">
+                    Plot No. 20, Block: H-1/A, SECTOR-63, Noida, UP, India
+                  </p>
+                  <p className="font-light leading-[20px]">Pin code - 201301</p>
+                </div>
               </div>
             </div>
             <div className="flex flex-col md:items-center justify-between pt-1.5">

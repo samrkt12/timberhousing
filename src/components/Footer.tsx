@@ -146,15 +146,21 @@ const Footer = (props: Props) => {
               </h3>
               <ul className="space-y-2 font-extralight lg:text-lg">
                 <li>
-                  <Link href="#" className="hover:underline flex items-center">
-                    <FaPhone className="inline-flex mr-2 w-5 h-5  " />
-                    <span className="mr-1 font-semibold">+91</span>1234567890
+                  <Link
+                    href="tel:+917388476677"
+                    className="hover:underline flex items-center"
+                  >
+                    <FaPhone className="inline-flex mr-2 w-5 h-5" />
+                    <span className="mr-1 font-semibold">+91</span>7388476677
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:underline flex items-center">
-                    <IoMdMail className="inline-flex mr-1.5 w-6 h-6 " />
-                    <span className=" font-medium">care@woodenhousing.com</span>
+                  <Link
+                    href="mailto:info@woodenhousing.com"
+                    className="hover:underline flex items-center"
+                  >
+                    <IoMdMail className="inline-flex mr-1.5 w-6 h-6" />
+                    <span className="font-medium">info@woodenhousing.com</span>
                   </Link>
                 </li>
               </ul>
@@ -258,22 +264,22 @@ const Footer = (props: Props) => {
                 <ul className="space-y-2 font-extralight">
                   <li>
                     <Link
-                      href="#"
+                      href="tel:+917388476677"
                       className="hover:underline flex items-center text-sm md:text-base"
                     >
-                      <FaPhone className="inline-flex mr-1.5 w-3 h-3  " />
-                      <span className="mr-1 font-semibold ">+91</span>
-                      1234567890
+                      <FaPhone className="inline-flex mr-1.5 w-3 h-3" />
+                      <span className="mr-1 font-semibold">+91</span>
+                      7388476677
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="mailto:info@woodenhousing.com"
                       className="hover:underline flex items-center"
                     >
-                      <IoMdMail className="inline-flex mr-1.5 w-4 h-4 " />
+                      <IoMdMail className="inline-flex mr-1.5 w-4 h-4" />
                       <span className="text-xs md:text-sm font-medium">
-                        care@woodenhousing.com
+                        info@woodenhousing.com
                       </span>
                     </Link>
                   </li>

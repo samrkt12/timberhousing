@@ -208,20 +208,22 @@ const Page = (props: Props) => {
           </h4>
           <div className="flex items-center gap-2 mb-2 text-sm">
             <IoMdMail className="text-[#4B325A] w-4 h-4" />
-            <p>example@gmail.com</p>
+            <p>info@woodenhousing.com</p>
           </div>
           <div className="flex items-center gap-2 mb-2 text-sm">
             <FaPhoneAlt className="text-[#4B325A] w-4 h-4" />
             <p className="font-light">
-              <span className="font-semibold">+91</span> 811818181
+              <span className="font-semibold">+91</span> 7388476677
             </p>
           </div>
           <div className="flex items-center gap-2 mb-2 text-sm">
             <FaLocationDot className="flex-shrink-0 text-[#4B325A] w-4 h-4" />
-            <p className="font-light leading-[20px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.{" "}
-            </p>
+            <div>
+              <p className="font-light leading-[20px]">
+                Plot No. 20, Block: H-1/A, SECTOR-63, Noida, UP, India
+              </p>
+              <p className="font-light leading-[20px]">Pin code - 201301</p>
+            </div>
           </div>
         </div>
         <div className="flex gap-6 pl-0.5 items-center mt-4 ">
