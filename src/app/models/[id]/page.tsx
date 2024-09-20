@@ -23,49 +23,49 @@ interface ModelDetailsProps {
 
 const stepsData = [
   {
-    image: "/workStep1.png",
+    image: "/svg/step1.svg",
     title: "Raise a request",
     description:
       "Reach out to us to express your interest in building a wooden house/cottage.",
   },
   {
-    image: "/workStep2.png",
+    image: "/svg/step2.svg",
     title: "Meet our expert",
     description:
       "Our architect will visit you to discuss your ideas, preferences, and budget, ensuring we capture your vision perfectly.",
   },
   {
-    image: "/workStep3.png",
+    image: "/svg/step3.svg",
     title: "Explore design options",
     description:
       "We’ll present you with various design options and reference images to help you choose the style and layout that best suits your needs.",
   },
   {
-    image: "/workStep4.png",
+    image: "/svg/step4.svg",
     title: "Book with us",
     description:
       "Once you’re satisfied with the design, secure your booking to begin the next steps.",
   },
   {
-    image: "/workStep5.png",
+    image: "/svg/step5.svg",
     title: "Receive 3D designs",
     description:
       "We create a detailed 3D model of your wooden house, allowing you to visualize every aspect before construction begins.",
   },
   {
-    image: "/workStep6.png",
+    image: "/svg/step6.svg",
     title: "Finalize Materials & Specifications",
     description:
       "Work with us to select the perfect materials, from wood types to finishes, ensuring every detail aligns with your preferences.",
   },
   {
-    image: "/workStep7.png",
+    image: "/svg/step7.svg",
     title: "Monitor Construction Progress",
     description:
       "Stay informed as our team keeps you updated on the construction progress, from foundation to final touches.",
   },
   {
-    image: "/workStep8.png",
+    image: "/svg/step8.svg",
     title: "Handover to Client",
     description:
       "Upon completion, we hand over your fully finished wooden house, ready for you to move in and enjoy.",
@@ -110,7 +110,7 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
               href={`/${slug}`}
               className="text-xs lg:text-sm  text-center leading-6 lg:leading-7 hover:text-primary-light transition-colors duration-300"
             >
-              {`${model.category} Series`}
+              {`${model.category}`}
             </Link>
             <IoIosArrowForward className="text-primary-base w-4 md:w-5 h-4 md:h-5" />
             <Link
@@ -135,13 +135,13 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
       <div className="relative z-20 flex justify-between gap-1 lg:gap-2 h-full w-full max-w-screen-xl mx-auto px-2.5 md:px-4 lg:px-0 py-1.5 mb-0 lg:my-4 ">
         <div className="w-[18%] lg:w-[201px] flex flex-col items-center">
           <div className=" rounded-full p-1 lg:p-2  border-[2px] lg:border-[2.5px] border-[#D75337] mb-2 lg:mb-4 hover:bg-primary-base transition-colors duration-300">
-            <div className="bg-[#FFF1EC] p-1.5 lg:p-3 rounded-full">
+            <div className="bg-[#FFF1EC] rounded-full">
               <Image
-                src="/unique5.png"
-                alt="eq icon"
+                src="/svg/innerIcon1.svg"
+                alt="earthquake"
                 width={80}
                 height={80}
-                className="w-7 lg:w-10 h-7 lg:h-10 rounded-full"
+                className="w-9 lg:w-16 h-9 lg:h-16 rounded-full"
               ></Image>
             </div>
           </div>
@@ -152,13 +152,13 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
 
         <div className="w-[18%] lg:w-[225px] flex flex-col items-center">
           <div className=" rounded-full  p-1 lg:p-2 border-[2px] lg:border-[2.5px] border-[#D75337] mb-2 lg:mb-4 hover:bg-primary-base transition-colors duration-300">
-            <div className="bg-[#FFF1EC] p-1.5 lg:p-3 rounded-full">
+            <div className="bg-[#FFF1EC] rounded-full">
               <Image
-                src="/unique4.png"
-                alt="eq icon"
+                src="/svg/innerIcon2.svg"
+                alt="heat and cold"
                 width={80}
                 height={80}
-                className="w-7 lg:w-10 h-7 lg:h-10 rounded-full"
+                className="w-9 lg:w-16 h-9 lg:h-16 rounded-full"
               ></Image>
             </div>
           </div>
@@ -169,13 +169,13 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
 
         <div className="w-[18%] lg:w-[200px] flex flex-col items-center">
           <div className=" rounded-full  p-1 lg:p-2 border-[2px] lg:border-[2.5px] border-[#D75337] mb-2 lg:mb-4 hover:bg-primary-base transition-colors duration-300">
-            <div className="bg-[#FFF1EC] p-1.5 lg:p-3 rounded-full">
+            <div className="bg-[#FFF1EC] rounded-full">
               <Image
-                src="/unique7.png"
-                alt="eq icon"
+                src="/svg/innerIcon3.svg"
+                alt="fire"
                 width={80}
                 height={80}
-                className="w-7 lg:w-10 h-7 lg:h-10 rounded-full"
+                className="w-9 lg:w-16 h-9 lg:h-16 rounded-full"
               ></Image>
             </div>
           </div>
@@ -186,13 +186,13 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
 
         <div className="w-[18%] lg:w-[200px] flex flex-col items-center">
           <div className=" rounded-full  p-1 lg:p-2 border-[2px] lg:border-[2.5px] border-[#D75337] mb-2 lg:mb-4 hover:bg-primary-base transition-colors duration-300">
-            <div className="bg-[#FFF1EC] p-1.5 lg:p-3 rounded-full">
+            <div className="bg-[#FFF1EC] rounded-full">
               <Image
-                src="/unique5.png"
-                alt="eq icon"
+                src="/svg/innerIcon4.svg"
+                alt="sound proof"
                 width={80}
                 height={80}
-                className="w-7 lg:w-10 h-7 lg:h-10 rounded-full"
+                className="w-9 lg:w-16 h-9 lg:h-16 rounded-full"
               ></Image>
             </div>
           </div>
@@ -203,13 +203,13 @@ export default function ModelDetails({ params }: ModelDetailsProps) {
 
         <div className="w-[18%] lg:w-[200px] flex flex-col items-center">
           <div className=" rounded-full  p-1 lg:p-2 border-[2px] lg:border-[2.5px] border-[#D75337] mb-2 lg:mb-4 hover:bg-primary-base transition-colors duration-300">
-            <div className="bg-[#FFF1EC] p-1.5 lg:p-3 rounded-full">
+            <div className="bg-[#FFF1EC] rounded-full">
               <Image
-                src="/unique4.png"
-                alt="eq icon"
+                src="/svg/innerIcon5.svg"
+                alt="warranty"
                 width={80}
                 height={80}
-                className="w-7 lg:w-10 h-7 lg:h-10 rounded-full"
+                className="w-9 lg:w-16 h-9 lg:h-16 rounded-full"
               ></Image>
             </div>
           </div>

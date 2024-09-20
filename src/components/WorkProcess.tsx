@@ -35,9 +35,9 @@ const WorkProcess = (props: Props) => {
         <div className="flex flex-col lg:flex-row items-start justify-between w-full gap-2 lg:gap-0">
           {/* Step 1 */}
           <div className="flex flex-col items-center lg:items-start w-full lg:w-1/4">
-            <div className="w-[180px] h-[180px] lg:w-[230px] lg:h-[230px]">
+            <div className="w-[180px] h-[180px] lg:w-[95%] lg:h-[230px]">
               <Image
-                src="/workProcess2.png"
+                src="/svg/workProcess1.svg"
                 width={230}
                 height={230}
                 alt="Step 1"
@@ -65,13 +65,13 @@ const WorkProcess = (props: Props) => {
 
           {/* Step 2 */}
           <div className="flex flex-col items-center lg:items-start w-full lg:w-1/4">
-            <div className="w-[180px] h-[180px] lg:w-[230px] lg:h-[230px]">
+            <div className="w-[180px] h-[180px] lg:w-[95%] lg:h-[230px] lg:relative">
               <Image
-                src="/workProcess1.png"
+                src="/svg/workProcess2.svg"
                 width={230}
                 height={230}
                 alt="Step 2"
-                className="mb-4 w-full h-full object-contain"
+                className="mb-4 w-full h-full object-contain lg:relative lg:top-3"
               />
             </div>
             <div className="hidden lg:flex w-full items-center justify-center mb-4">
@@ -95,9 +95,9 @@ const WorkProcess = (props: Props) => {
 
           {/* Step 3 */}
           <div className="flex flex-col items-center lg:items-start w-full lg:w-1/4">
-            <div className="w-[180px] h-[180px] lg:w-[230px] lg:h-[230px]">
+            <div className="w-[180px] h-[180px] lg:w-[95%] lg:h-[230px]">
               <Image
-                src="/workProcess3.png"
+                src="/svg/workProcess3.svg"
                 width={230}
                 height={230}
                 alt="Step 3"
@@ -125,9 +125,9 @@ const WorkProcess = (props: Props) => {
 
           {/* Step 4 */}
           <div className="flex flex-col items-center lg:items-start w-full lg:w-1/4">
-            <div className="w-[180px] h-[180px] lg:w-[230px] lg:h-[230px]">
+            <div className="w-[180px] h-[180px] lg:w-[95%] lg:h-[230px]">
               <Image
-                src="/workProcess4.png"
+                src="/svg/workProcess4.svg"
                 width={230}
                 height={230}
                 alt="Step 4"

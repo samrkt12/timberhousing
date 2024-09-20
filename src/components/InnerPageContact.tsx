@@ -87,7 +87,7 @@ const InnerPageContact = (props: Props) => {
           />
         </div>
 
-        <form className="p-5 lg:p-8 border-[2px] lg:border-[3px]  border-[#D75337] rounded-[15px] bg-whites-light w-full max-w-[500px] lg:w-[580px] relative z-30">
+        <form className="p-5 lg:p-8 border-[2px] lg:border-[3px]  border-[#D75337] rounded-[15px] bg-whites-light w-full max-w-[580px] lg:w-[580px] relative z-30">
           <h3 className="font-medium text-[22px] lg:text-[28px] leading-7 lg:leading-8 mb-4 lg:mb-8">
             Get <span className="text-primary-base">free</span> consultation
           </h3>
