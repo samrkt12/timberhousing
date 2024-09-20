@@ -9,7 +9,7 @@
 
 .diagonal-section::before {
   content: "";
-  z-index: 80;
+  z-index: 90;
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -21,7 +21,7 @@
 
 @media (max-width: 768px) {
   .diagonal-section::before {
-    height: 22px;
+    height: 28px;
   }
 }
 
@@ -145,7 +145,7 @@ html {
 }
 
 .animate-3 {
-  animation: revolve3 4s ease-in-out infinite;
+  animation: revolve3 5.6s ease-in-out infinite;
 }
 
 .cube-spinner {

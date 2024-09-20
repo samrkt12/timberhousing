@@ -170,7 +170,7 @@ const Page = (props: Props) => {
         </div>
 
         {/*Whatsapp animation */}
-        <div className="flex flex-row items-center justify-center gap-3 relative z-30 mb-7">
+        <div className="flex flex-row items-center justify-center gap-0.5 relative z-30 mb-3.5">
           {/* WhatsApp Icon Section */}
           <div className="relative w-[5rem] h-[5rem]  flex items-center justify-center">
             <div className="relative z-10">
@@ -184,8 +184,8 @@ const Page = (props: Props) => {
 
           {/* Text Section with Green Dot */}
           <div className="flex flex-col justify-center items-start">
-            <h3 className="text-[#2D2D2D] text-lg flex items-center gap-2">
-              We are online now
+            <h3 className=" text-[#1DAF11] text-lg flex items-center gap-0.5">
+              WhatsApp us
               <span className="relative inline-block w-[12px] h-[12px] bg-[#1DAF11] rounded-full ml-2">
                 <div className="absolute  inset-0 flex items-center justify-center">
                   <div className="absolute w-[150%] h-[150%] rounded-full border-[2px] border-[#1DAF11] opacity-70 animate-ripple"></div>
@@ -193,8 +193,8 @@ const Page = (props: Props) => {
                 </div>
               </span>
             </h3>
-            <p className=" text-[#1DAF11] text-lg  pl-0.5 tracking-wide leading-7 font-semibold ">
-              WhatsApp us
+            <p className="text-[#2D2D2D]  text-sm  pl-[1px]  leading-6 font-normal ">
+              We are online now
             </p>
           </div>
         </div>

@@ -198,7 +198,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/*Whatsapp animation */}
-          <div className="flex flex-row items-center justify-center gap-6 relative z-30 mb-10">
+          <div className="flex flex-row items-center justify-center gap-3 relative z-30 mb-10">
             {/* WhatsApp Icon Section */}
             <div className="relative w-[6rem] h-[6rem]  flex items-center justify-center">
               <div className="relative z-10">
@@ -212,8 +212,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
 
             {/* Text Section with Green Dot */}
             <div className="flex flex-col items-center justify-center lg:items-start">
-              <h3 className="text-[#2D2D2D] text-[22px]  flex items-center gap-2">
-                We are online now
+              <h3 className=" text-[#1DAF11] text-[22px]  flex items-center  tracking-wide">
+                WhatsApp us
                 <span className="relative inline-block w-[13px] h-[13px] bg-[#1DAF11] rounded-full ml-2">
                   <div className="absolute  inset-0 flex items-center justify-center">
                     <div className="absolute w-[150%] h-[150%] rounded-full border-[2px] border-[#1DAF11] opacity-70 animate-ripple"></div>
@@ -221,8 +221,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   </div>
                 </span>
               </h3>
-              <p className=" text-[#1DAF11] text-[22px]  tracking-wide leading-10 font-semibold ">
-                WhatsApp us
+              <p className="text-[#2D2D2D]  text-lg  leading-6 font-medium ">
+                We are online now
               </p>
             </div>
           </div>

@@ -38,7 +38,7 @@ const InnerPageContact = (props: Props) => {
       </div>
 
       <div className="flex w-full flex-col-reverse lg:flex-row items-center justify-center gap-5 lg:gap-8 relative overflow-hidden lg:pl-[8.5rem] px-3">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-1 lg:gap-6 relative z-30 pb-3">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-1 lg:gap-1.5 relative z-30 pb-3">
           {/* WhatsApp Icon Section */}
           <div className="relative w-[6rem] h-[6rem] lg:w-[7.7rem] lg:h-[7.7rem] flex items-center justify-center">
             <div className="relative z-10">
@@ -52,8 +52,8 @@ const InnerPageContact = (props: Props) => {
 
           {/* Text Section with Green Dot */}
           <div className="flex flex-col items-center justify-center lg:items-start">
-            <h3 className="text-[#2D2D2D] text-xl lg:text-2xl flex items-center gap-1 lg:gap-2">
-              We are online now
+            <h3 className=" text-[#1DAF11] text-xl lg:text-2xl flex items-center gap-1 tracking-wide">
+              WhatsApp us
               <span className="relative inline-block w-3 h-3 lg:w-[14px] lg:h-[14px] bg-[#1DAF11] rounded-full ml-2">
                 <div className="absolute  inset-0 flex items-center justify-center">
                   <div className="absolute w-[150%] h-[150%] rounded-full border-[2px] border-[#1DAF11] opacity-70 animate-ripple"></div>
@@ -61,8 +61,8 @@ const InnerPageContact = (props: Props) => {
                 </div>
               </span>
             </h3>
-            <p className="inline-flex text-[#1DAF11] text-lg lg:text-2xl lg:leading-10 font-semibold items-center gap-2">
-              WhatsApp us
+            <p className="inline-flex text-[#2D2D2D] text-lg lg:text-xl pl-1 lg:pl-[1px] lg:leading-8 font-medium items-center gap-2">
+              We are online now
             </p>
           </div>
         </div>
