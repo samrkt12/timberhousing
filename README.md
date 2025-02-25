@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TimberHousing 🏡  
 
-## Getting Started
+TimberHousing is a modern Next.js 14 website showcasing high-quality wooden houses. Built with Tailwind CSS for styling, it provides an interactive and visually appealing experience.
 
-First, run the development server:
+## 🚀 Features  
+- Responsive design with Tailwind CSS  
+- Smooth scrolling and navigation  
+- 3D model viewer with auto-rotate toggle  
+- Advanced filtering system for wooden house models  
+- Blog section with paginated articles  
+- Image pop-ups with zoom and navigation  
 
+## 🛠️ Tech Stack  
+- **Next.js 14** – Fast and optimized React framework  
+- **TypeScript** – Type safety for better code quality  
+- **Tailwind CSS** – Utility-first CSS for responsive design  
+- **yet-another-react-lightbox** – Image zoom and navigation  
+- **embla-carousel-react** – Smooth autoplay carousel  
+- **Vercel** – Deployment and hosting  
+
+## 🚀 Installation
+Clone the repo and install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/samrkt12/timberhousing.git  
+cd timberhousing  
+npm install
+```
+Run the development server:
+```bash
+npm run dev  
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌍 Deployment  
+This project is deployed on **Vercel**:  
+🔗 [Live Demo](https://timberhousing.vercel.app/) 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📜 License
+This project is licensed under the MIT License.
