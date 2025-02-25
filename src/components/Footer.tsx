@@ -59,26 +59,26 @@ const Footer = (props: Props) => {
               </h3>
               <ul className="space-y-2 font-extralight text-sm md:text-base lg:text-lg tracking-widest lg:tracking-normal">
                 <li>
-                  <Link href="/wooden-cottage" className="hover:underline">
-                    Wooden Cottages
+                  <Link href="/timber-cottage" className="hover:underline">
+                    Timber Cottages
                   </Link>
                 </li>
                 <li>
-                  <Link href="/wooden-house" className="hover:underline">
-                    Wooden Houses
+                  <Link href="/timber-house" className="hover:underline">
+                    Timber Houses
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/wooden-pergola-gazebo"
+                    href="/timber-pergola-gazebo"
                     className="hover:underline"
                   >
-                    Wooden Pergola/Gazebo
+                    Timber Pergola/Gazebo
                   </Link>
                 </li>
                 <li>
-                  <Link href="/wooden-cafe" className="hover:underline">
-                    Wooden Cafe
+                  <Link href="/timber-cafe" className="hover:underline">
+                    Timber Cafe
                   </Link>
                 </li>
               </ul>
@@ -90,8 +90,8 @@ const Footer = (props: Props) => {
               </h3>
               <ul className="space-y-2 font-extralight text-sm md:text-base lg:text-lg tracking-widest lg:tracking-normal">
                 <li>
-                  <Link href="/why-wooden-house" className="hover:underline">
-                    Why wooden house?
+                  <Link href="/why-timber-house" className="hover:underline">
+                    Why Timber house?
                   </Link>
                 </li>
                 <li>
@@ -117,21 +117,11 @@ const Footer = (props: Props) => {
                     Terms & conditions
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href="#" className="hover:underline">
-                    Privacy Policy
-                  </Link>
-                </li> */}
                 <li>
                   <Link href="/faq" className="hover:underline">
                     FAQ
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href="#" className="hover:underline">
-                    Cancellation policy
-                  </Link>
-                </li> */}
                 <li>
                   <Link href="/referral-policy" className="hover:underline">
                     Referral policy
@@ -147,20 +137,20 @@ const Footer = (props: Props) => {
               <ul className="space-y-2 font-extralight lg:text-lg">
                 <li>
                   <Link
-                    href="tel:+917388476677"
+                    href="tel:+919008007001"
                     className="hover:underline flex items-center"
                   >
                     <FaPhone className="inline-flex mr-2 w-5 h-5" />
-                    <span className="mr-1 font-semibold">+91</span>7388476677
+                    <span className="mr-1 font-semibold">+91</span>9008007001
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="mailto:info@woodenhousing.com"
+                    href="mailto:info@timberhousing.com"
                     className="hover:underline flex items-center"
                   >
                     <IoMdMail className="inline-flex mr-1.5 w-6 h-6" />
-                    <span className="font-medium">info@woodenhousing.com</span>
+                    <span className="font-medium">info@timberhousing.com</span>
                   </Link>
                 </li>
               </ul>
@@ -189,7 +179,7 @@ const Footer = (props: Props) => {
                 className="w-full h-full"
               />
               <p className="flex flex-col  items-start justify-end uppercase text-[18px] font-bold leading-5 ">
-                <span>wooden</span>
+                <span>timber</span>
                 <span>housing</span>
               </p>
             </div>
@@ -198,11 +188,10 @@ const Footer = (props: Props) => {
               <p className="flex text-base font-light items-center tracking-widest">
                 <FaRegCopyright className="mr-1.5 w-5 h-5" />
                 <Link
-                  href="https://www.woodenhousing.com"
-                  target="_blank"
+                  href="https://www.timberhousing.vercel.app"
                   className="hover:underline"
                 >
-                  woodenhousing.com
+                  timberhousing.vercel.app
                 </Link>
               </p>
             </div>
@@ -237,7 +226,7 @@ const Footer = (props: Props) => {
                   className="w-9 h-9"
                 />
                 <p className="flex flex-col items-start justify-end uppercase md:text-[18px] font-bold leading-5 tracking-widest ">
-                  <span>wooden</span>
+                  <span>timber</span>
                   <span>housing</span>
                 </p>
               </div>
@@ -264,22 +253,22 @@ const Footer = (props: Props) => {
                 <ul className="space-y-2 font-extralight">
                   <li>
                     <Link
-                      href="tel:+917388476677"
+                      href="tel:+919008007001"
                       className="hover:underline flex items-center text-sm md:text-base"
                     >
                       <FaPhone className="inline-flex mr-1.5 w-3 h-3" />
                       <span className="mr-1 font-semibold">+91</span>
-                      7388476677
+                      9008007001
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="mailto:info@woodenhousing.com"
+                      href="mailto:info@timberhousing.com"
                       className="hover:underline flex items-center"
                     >
                       <IoMdMail className="inline-flex mr-1.5 w-4 h-4" />
                       <span className="text-xs md:text-sm font-medium">
-                        info@woodenhousing.com
+                        info@timberhousing.com
                       </span>
                     </Link>
                   </li>
@@ -291,11 +280,11 @@ const Footer = (props: Props) => {
             <p className="flex  text-sm font-light gap-1.5  items-center tracking-wider md:tracking-widest">
               <FaRegCopyright className="w-4 h-4" />
               <Link
-                href="https://www.woodenhousing.com"
+                href="https://www.timberhousing.vercel.app"
                 target="_blank"
                 className="hover:underline"
               >
-                woodenhousing.com
+                timberhousing.vercel.app
               </Link>
             </p>
           </div>

@@ -8,7 +8,7 @@ const approachData = [
     image: "/approach1.jpg",
     title: "Kiln Dried Wood",
     description:
-      "Kiln-drying removes up to 90% of moisture, preventing decay and killing pests, thus extending wooden life.",
+      "Kiln-drying removes up to 90% of moisture, preventing decay and killing pests, thus extending timber life.",
   },
   {
     image: "/approach2.jpg",

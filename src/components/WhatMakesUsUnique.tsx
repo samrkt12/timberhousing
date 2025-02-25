@@ -56,13 +56,13 @@ const WhatMakesUsUnique = (props: Props) => {
                 image: "/unique2.png",
                 title: "Customization",
                 description:
-                  "We offer personalized design options with 3D view to tailor every detail of your wooden house to your preferences, ensuring a unique and customized living experience.",
+                  "We offer personalized design options with 3D view to tailor every detail of your timber house to your preferences, ensuring a unique and customized living experience.",
               },
               {
                 image: "/unique3.png",
                 title: "Deadline Commitment",
                 description:
-                  "We are dedicated to meeting our deadlines, ensuring your wooden house is completed on time without compromising quality.",
+                  "We are dedicated to meeting our deadlines, ensuring your timber house is completed on time without compromising quality.",
               },
             ].map((item, index) => (
               <div

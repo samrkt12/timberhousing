@@ -6,24 +6,24 @@ import { IoIosArrowForward, IoIosArrowUp } from "react-icons/io";
 type Props = {};
 const faqs = [
   {
-    question: "What is the difference between wooden house?",
+    question: "What is the difference between timber house?",
     answer:
       "The exact price of the Customer project will depend on measurements, scope of work and change in designs / material / finishes. Based on these revisions, Customers can expect the quote value to rise or drop by approximately 5-10%. However, in case of non standard product selection / customization / additional scope of work, the prices may substantially increase from the initial quote value.",
   },
   {
-    question: "What is the WoodenHousing referral program?",
+    question: "What is the TimberHousing referral program?",
     answer:
-      "The WoodenHousing referral program rewards you with ₹5000 for every friend you invite who books their dream home with us. It's our way of saying thank you for helping us grow our community of happy homeowners.",
+      "The TimberHousing referral program rewards you with ₹5000 for every friend you invite who books their dream home with us. It's our way of saying thank you for helping us grow our community of happy homeowners.",
   },
   {
-    question: "How does the WoodenHousing referral program work?",
+    question: "How does the TimberHousing referral program work?",
     answer:
-      "Once you refer a friend to WoodenHousing, and they book their dream home with us, you will receive ₹5000 as a reward. Make sure your friend mentions your referral during the booking process to ensure you get credited.",
+      "Once you refer a friend to TimberHousing, and they book their dream home with us, you will receive ₹5000 as a reward. Make sure your friend mentions your referral during the booking process to ensure you get credited.",
   },
   {
     question: "What does referrer mean?",
     answer:
-      "A referrer is someone who invites others to use WoodenHousing's services. In our referral program, the referrer is the person who receives a reward when their referred friend books a home with us.",
+      "A referrer is someone who invites others to use TimberHousing's services. In our referral program, the referrer is the person who receives a reward when their referred friend books a home with us.",
   },
   {
     question: "How many times can a referrer invite others?",
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Are there any conditions for receiving the referral reward?",
     answer:
-      "Yes, the referral reward is only given when the referred friend completes a booking of their dream home with WoodenHousing. The referral must be mentioned during the booking process to qualify for the reward.",
+      "Yes, the referral reward is only given when the referred friend completes a booking of their dream home with TimberHousing. The referral must be mentioned during the booking process to qualify for the reward.",
   },
   {
     question: "When will I receive my referral reward?",

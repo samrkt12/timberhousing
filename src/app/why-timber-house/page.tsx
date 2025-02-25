@@ -21,7 +21,7 @@ const benefitsData = [
   { id: "environmental-impact", title: "Environmental Impact" },
 ];
 
-const WhyWoodenHouse = () => {
+const WhyTimberHouse = () => {
   const handleScrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     const navbarHeight = window.innerWidth >= 1024 ? 2 : 2;
@@ -57,10 +57,10 @@ const WhyWoodenHouse = () => {
             </Link>
             <IoIosArrowForward className="text-primary-base w-4 h-4" />
             <Link
-              href="/why-wooden-house"
+              href="/why-timber-house"
               className="text-sm leading-7 font-semibold hover:text-primary-light transition-colors duration-300"
             >
-              Why wooden house?
+              Why timber house?
             </Link>
           </div>
           <div className="w-full my-10  lg:my-16">
@@ -73,7 +73,7 @@ const WhyWoodenHouse = () => {
                 className="w-12 md:w-[200px] lg:w-[350px]"
               />
               <h2 className="mx-1 text-2xl lg:text-[42px] lg:leading-[46px] font-semibold whitespace-nowrap">
-                Why Wooden <span className="text-primary-base">House?</span>
+                Why Timber <span className="text-primary-base">House?</span>
               </h2>
               <Image
                 src="/vector2.png"
@@ -84,7 +84,7 @@ const WhyWoodenHouse = () => {
               />
             </div>
             <p className="text-sm lg:text-xl mx-auto font-light text-center">
-              Wood is a high-performance building material
+              Timber is a high-performance building material
             </p>
           </div>
         </div>
@@ -434,7 +434,7 @@ const WhyWoodenHouse = () => {
           {/* Image and Caption 1 */}
           <div className="flex flex-col items-start lg:items-center gap-2 w-full lg:w-1/3">
             <p className="lg:text-center text-left text-[#666666] text-sm leading-6 font-medium lg:order-2 lg:max-w-[30ch]">
-              Wooden floor that did not collapse following a fire
+              Timber floor that did not collapse following a fire
             </p>
             <Image
               src="/fire-image4.png"
@@ -448,7 +448,7 @@ const WhyWoodenHouse = () => {
           {/* Image and Caption 2 */}
           <div className="flex flex-col  items-start lg:items-center gap-2 w-full lg:w-1/3">
             <p className="lg:text-center text-left text-[#666666] text-sm leading-6 font-medium lg:order-2 lg:max-w-[30ch]">
-              Wooden wall on the side exposed to fire
+              TImber wall on the side exposed to fire
             </p>
             <Image
               src="/fire-image3.png"
@@ -462,7 +462,7 @@ const WhyWoodenHouse = () => {
           {/* Image and Caption 3 */}
           <div className="flex flex-col items-start lg:items-center gap-2 w-full lg:w-1/3">
             <p className="lg:text-center text-left text-[#666666] text-sm leading-6 font-medium lg:order-2 lg:max-w-[30ch]">
-              Wooden wall on the side not exposed to fire
+              Timber wall on the side not exposed to fire
             </p>
             <Image
               src="/fire-image4.png"
@@ -786,4 +786,4 @@ const WhyWoodenHouse = () => {
   );
 };
 
-export default WhyWoodenHouse;
+export default WhyTimberHouse;

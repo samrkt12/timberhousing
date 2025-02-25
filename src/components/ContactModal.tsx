@@ -236,21 +236,21 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
               </h4>
               <div className="flex items-center gap-3 mb-2 pl-1">
                 <IoMdMail className="text-[#4B325A] w-5 h-5" />
-                <p>info@woodenhousing.com</p>
+                <p>info@timberhousing.com</p>
               </div>
               <div className="flex items-center gap-3 mb-2 pl-1">
                 <FaPhoneAlt className="text-[#4B325A] w-5 h-5" />
                 <p className="font-light">
-                  <span className="font-semibold">+91</span> 7388476677
+                  <span className="font-semibold">+91</span> 9008007001
                 </p>
               </div>
               <div className="flex items-center gap-3 mb-1 pl-1">
                 <FaLocationDot className="text-[#4B325A] w-5 h-5" />
                 <div className="text-[15px]">
                   <p className="font-light leading-[20px]">
-                    Plot No. 20, Block: H-1/A, SECTOR-63, Noida, UP, India
+                    Plot 100, A-11/3, AREA-91, Bangalore, India
                   </p>
-                  <p className="font-light leading-[20px]">Pin code - 201301</p>
+                  <p className="font-light leading-[20px]">Pin code - 500000</p>
                 </div>
               </div>
             </div>
@@ -264,7 +264,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   className="w-[55px] h-[55px] object-contain"
                 />
                 <p className="flex flex-col text-[#2C2C2C] items-start justify-end uppercase text-3xl font-bold leading-[29px] tracking-widest ">
-                  <span>wooden</span>
+                  <span>timber</span>
                   <span>housing</span>
                 </p>
               </div>

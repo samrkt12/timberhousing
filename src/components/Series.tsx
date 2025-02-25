@@ -29,7 +29,7 @@ const Series = (props: Props) => {
           />
         </div>
         <p className="text-sm lg:text-base mb-10 lg:mb-16 max-w-[58ch] mx-auto font-light text-center text-[#636363] px-6 lg:px-0">
-          A series of wooden houses designed with direct-angle views, allowing
+          A series of timber houses designed with direct-angle views, allowing
           you to see the construction details of your home from every
           perspective.
         </p>

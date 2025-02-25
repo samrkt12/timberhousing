@@ -10,7 +10,7 @@ export type Blog = {
 const blogsData: Blog[] = [
   {
     id: "1",
-    title: "Wooden house manufacturers in India",
+    title: "Timber house manufacturers in India",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     mainImage: "/blogs/1/main.jpg",
@@ -81,16 +81,16 @@ const blogsData: Blog[] = [
   },
   {
     id: "4",
-    title: "Top 5 benefits of wooden homes",
+    title: "Top 5 benefits of timber homes",
     summary:
-      "Wooden homes are gaining popularity for their aesthetic appeal, energy efficiency, and quick construction.",
+      "Timber homes are gaining popularity for their aesthetic appeal, energy efficiency, and quick construction.",
     mainImage: "/blogs/4/main.jpg",
     publishedDate: "2023-04-20",
     sections: [
       {
         heading: "Aesthetic appeal",
         content: [
-          "This section discusses the visual appeal of wooden homes.",
+          "This section discusses the visual appeal of timber homes.",
           "Another sentence in this section.",
         ],
         image: "/blogs/4/img1.jpg",
@@ -105,23 +105,23 @@ const blogsData: Blog[] = [
   },
   {
     id: "5",
-    title: "Wooden homes vs. brick homes: A comparison",
+    title: "Timber homes vs. brick homes: A comparison",
     summary:
-      "Comparing the differences between wooden and brick homes in terms of cost, efficiency, and sustainability.",
+      "Comparing the differences between timber and brick homes in terms of cost, efficiency, and sustainability.",
     mainImage: "/blogs/5/main.jpg",
     publishedDate: "2023-05-15",
     sections: [
       {
         heading: "Cost comparison",
         content: [
-          "This section explains the cost differences between wooden and brick homes.",
+          "This section explains the cost differences between timber and brick homes.",
         ],
         image: "/blogs/5/img1.jpg",
       },
       {
         heading: "Sustainability",
         content: [
-          "This section highlights the sustainability aspects of wooden homes.",
+          "This section highlights the sustainability aspects of timber homes.",
         ],
       },
     ],

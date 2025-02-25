@@ -87,7 +87,7 @@ const WorkProcess = (props: Props) => {
               Design and Floor Plan Presentation
             </h3>
             <p className="text-[13px] lg:text-sm text-center lg:text-left text-[#636363] px-8 lg:px-0 lg:pr-8">
-              We share reference designs for wooden resorts, including detailed
+              We share reference designs for timber resorts, including detailed
               floor plans and 3D drawings, to give you a clear picture of the
               project.
             </p>

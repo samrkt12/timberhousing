@@ -18,7 +18,7 @@ const Page = () => {
   const [maxLivingArea, setMaxLivingArea] = useState<number | null>(null);
 
   const villaModels = modelsData.filter(
-    (model) => model.category === "Wooden House"
+    (model) => model.category === "Timber House"
   );
 
   const filteredModels = villaModels.filter((model) => {
@@ -103,10 +103,10 @@ const Page = () => {
             </Link>
             <IoIosArrowForward className="text-primary-base w-4 h-4" />
             <Link
-              href="/wooden-house"
+              href="/timber-house"
               className="text-sm leading-7 font-semibold hover:text-primary-light transition-colors duration-300"
             >
-              Wooden House Series
+              Timber House Series
             </Link>
           </div>
           <div className="w-full my-5 lg:my-8 mb-10 lg:mb-16">
@@ -119,7 +119,7 @@ const Page = () => {
                 className="w-16 md:w-[200px] lg:w-[350px]"
               />
               <h2 className="mx-1 text-2xl lg:text-[42px] lg:leading-[46px]  font-semibold whitespace-nowrap">
-                Wooden <span className="text-primary-base">House</span>
+                Timber <span className="text-primary-base">House</span>
               </h2>
               <Image
                 src="/vector2.png"

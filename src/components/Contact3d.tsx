@@ -19,10 +19,8 @@ const Contact3d = (props: Props) => {
             <div className="relative z-10 flex flex-col my-auto items-start max-w-[15rem] md:max-w-[32rem] lg:max-w-[42rem] p-2 lg:p-6 text-whites-light">
               <h3 className="md:text-2xl lg:text-3xl lg:leading-9 font-medium mb-1.5 md:mb-3 lg:mb-6">
                 India-
-                <span className="mr-1 lg:mr-2 text-primary-base">
-                  focused
-                </span>{" "}
-                Wooden company tailoring solutions to meet client needs.
+                <span className="mr-1 lg:mr-2 text-primary-base">focused</span>
+                timber company tailoring solutions to meet client needs.
               </h3>
               <p className="text-sm md:text-xl lg:text-2xl lg:leading-9 font-light mb-1 md:mb-2 lg:mb-4">
                 Built over <span className="font-medium">50+</span> homes

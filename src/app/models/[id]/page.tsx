@@ -26,7 +26,7 @@ const stepsData = [
     image: "/svg/step1.svg",
     title: "Raise a request",
     description:
-      "Reach out to us to express your interest in building a wooden house/cottage.",
+      "Reach out to us to express your interest in building a timber house/cottage.",
   },
   {
     image: "/svg/step2.svg",
@@ -50,7 +50,7 @@ const stepsData = [
     image: "/svg/step5.svg",
     title: "Receive 3D designs",
     description:
-      "We create a detailed 3D model of your wooden house, allowing you to visualize every aspect before construction begins.",
+      "We create a detailed 3D model of your timber house, allowing you to visualize every aspect before construction begins.",
   },
   {
     image: "/svg/step6.svg",
@@ -68,7 +68,7 @@ const stepsData = [
     image: "/svg/step8.svg",
     title: "Handover to Client",
     description:
-      "Upon completion, we hand over your fully finished wooden house, ready for you to move in and enjoy.",
+      "Upon completion, we hand over your fully finished timber house, ready for you to move in and enjoy.",
   },
 ];
 

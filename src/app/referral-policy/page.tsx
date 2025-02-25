@@ -15,19 +15,19 @@ type Props = {};
 
 const faqs = [
   {
-    question: "What is the WoodenHousing referral program?",
+    question: "What is the TimberHousing referral program?",
     answer:
-      "The WoodenHousing referral program rewards you with ₹5000 for every friend you invite who books their dream home with us. It's our way of saying thank you for helping us grow our community of happy homeowners.",
+      "The TimberHousing referral program rewards you with ₹5000 for every friend you invite who books their dream home with us. It's our way of saying thank you for helping us grow our community of happy homeowners.",
   },
   {
-    question: "How does the WoodenHousing referral program work?",
+    question: "How does the TimberHousing referral program work?",
     answer:
-      "Once you refer a friend to WoodenHousing, and they book their dream home with us, you will receive ₹5000 as a reward. Make sure your friend mentions your referral during the booking process to ensure you get credited.",
+      "Once you refer a friend to TimberHousing, and they book their dream home with us, you will receive ₹5000 as a reward. Make sure your friend mentions your referral during the booking process to ensure you get credited.",
   },
   {
     question: "What does referrer mean?",
     answer:
-      "A referrer is someone who invites others to use WoodenHousing's services. In our referral program, the referrer is the person who receives a reward when their referred friend books a home with us.",
+      "A referrer is someone who invites others to use TimberHousing's services. In our referral program, the referrer is the person who receives a reward when their referred friend books a home with us.",
   },
   {
     question: "How many times can a referrer invite others?",
@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Are there any conditions for receiving the referral reward?",
     answer:
-      "Yes, the referral reward is only given when the referred friend completes a booking of their dream home with WoodenHousing. The referral must be mentioned during the booking process to qualify for the reward.",
+      "Yes, the referral reward is only given when the referred friend completes a booking of their dream home with TimberHousing. The referral must be mentioned during the booking process to qualify for the reward.",
   },
   {
     question: "When will I receive my referral reward?",
@@ -168,7 +168,7 @@ const Page = (props: Props) => {
               <h4 className="text-[#161616] leading-5 md:leading-7  md:text-lg lg:text-xl font-medium text-center mb-1">
                 Invite your Friends to{" "}
                 <span className="font-semibold text-primary-base">
-                  WoodenHousing
+                  TimberHousing
                 </span>
               </h4>
               <p className="text-[#5B5B5B] text-xs lg:text-sm leading-4 lg:leading-6 text-center px-1">

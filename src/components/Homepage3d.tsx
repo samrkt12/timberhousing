@@ -62,7 +62,7 @@ const Homepage3d = (props: Props) => {
               Get a glimpse of our personalized 3D models
             </h3>
             <p className="text-[#636363] text-sm lg:text-lg font-light">
-              Our personalized wooden houses 3D model gives you a clear,
+              Our personalized timber houses 3D model gives you a clear,
               realistic view of your unique home design.
             </p>
           </div>

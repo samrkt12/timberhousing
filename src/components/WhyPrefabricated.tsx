@@ -70,7 +70,7 @@ const WhyPrefabricated = (props: Props) => {
             className="w-10 md:w-[200px] lg:w-[300px]"
           ></Image>
           <h2 className="mx-1 text-[22px] leading-[30px] lg:text-3xl lg:leading-10   font-semibold text-[#352E39] text-center lg:whitespace-nowrap">
-            Why Choose Prefabricated Wooden Houses?
+            Why Choose Prefabricated Timber Houses?
           </h2>
           <Image
             src="/vector2.png"

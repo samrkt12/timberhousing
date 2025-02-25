@@ -15,28 +15,28 @@ type Props = {};
 const servicesData = [
   {
     image: "/service1.jpg",
-    title: "Wooden Cottage",
+    title: "Timber Cottage",
     description:
-      "Cozy, handcrafted wooden cottages designed for comfort and natural charm.",
+      "Cozy, handcrafted timber cottages designed for comfort and natural charm.",
     link: "/wooden-cottage",
   },
   {
     image: "/service2.jpg",
-    title: "Wooden House",
+    title: "Timber House",
     description:
-      "Luxurious wooden villas offering elegance and sustainability in every detail.",
+      "Luxurious timber villas offering elegance and sustainability in every detail.",
     link: "/wooden-house",
   },
   {
     image: "/service3.jpg",
     title: "Pergola/Gazebo",
     description:
-      "Elegant wooden pergolas, perfect for enhancing your outdoor living spaces.",
+      "Elegant timber pergolas, perfect for enhancing your outdoor living spaces.",
     link: "/wooden-pergola-gazebo",
   },
   {
     image: "/service1.jpg",
-    title: "Wooden Cafe",
+    title: "Timber Cafe",
     description: "Elegant cafes perfect for gardens and outdoor spaces.",
     link: "/wooden-cafe",
   },
@@ -141,7 +141,7 @@ const HighlightedServices = (props: Props) => {
 
         <p className="text-sm lg:text-base mb-6 lg:mb-10 max-w-[55ch] lg:max-w-[70ch] mx-auto font-light text-center text-[#636363]">
           Our wide selection of{" "}
-          <span className="font-medium">wooden based</span> home, resorts, Cafe,
+          <span className="font-medium">timber based</span> home, resorts, Cafe,
           Gazibo, and Villas have both traditional and modern architectural
           solutions with high-quality materials. Our services include timely
           project completion and comprehensive post-construction support.

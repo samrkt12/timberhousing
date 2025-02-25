@@ -67,7 +67,7 @@ const Navbar = (props: Props) => {
               className="w-8 h-8 lg:w-9 lg:h-9"
             />
             <p className="flex flex-col lg:flex-row uppercase text-base lg:text-[21px] font-bold leading-4 lg:leading-7 lg:tracking-wider lg:mb-[2px]">
-              <span>wooden</span>
+              <span>timber</span>
               <span>housing</span>
             </p>
           </Link>
@@ -111,28 +111,28 @@ const Navbar = (props: Props) => {
               </p>
               <div className="absolute z-999 pt-[10px] px-[20px] pb-[16px] hidden left-0 mt-2 w-max bg-whites-light  rounded-[10px] shadow-[0px_4px_32.3px_0px_rgba(0,_0,_0,_0.1)] duration-200 group-hover:block">
                 <a
-                  href="/wooden-cottage"
+                  href="/timber-cottage"
                   className="block text-base leading-5 py-[10px] border-b border-whites-base last:border-0 hover:text-primary-base transition-colors duration-200"
                 >
-                  Wooden Cottage
+                  Timber Cottage
                 </a>
                 <a
-                  href="/wooden-house"
+                  href="/timber-house"
                   className="block text-base leading-5 py-[10px] border-b border-whites-base last:border-0 hover:text-primary-base transition-colors duration-200"
                 >
-                  Wooden House
+                  Timber House
                 </a>
                 <a
-                  href="/wooden-pergola-gazebo"
+                  href="/timber-pergola-gazebo"
                   className="block text-base leading-5 py-[10px] border-b border-whites-base last:border-0 hover:text-primary-base transition-colors duration-200"
                 >
-                  Wooden Pergola/Gazebo
+                  Timber Pergola/Gazebo
                 </a>
                 <a
-                  href="/wooden-cafe"
+                  href="/timber-cafe"
                   className="block text-base leading-5 py-[10px] border-b border-whites-base last:border-0 hover:text-primary-base transition-colors duration-200"
                 >
-                  Wooden Cafe
+                  Timber Cafe
                 </a>
               </div>
             </div>
@@ -186,22 +186,15 @@ const Navbar = (props: Props) => {
         <div className="h-[42px] hidden lg:flex w-full max-w-screen-xl mx-auto items-center px-2.5 md:px-4 lg:px-8">
           <div className="flex items-center gap-10 text-base leading-5 text-whites-grey">
             <Link
-              href="/why-wooden-house"
+              href="/why-timber-house"
               className={`py-1.5 relative transition-colors duration-300 ${
-                pathname === "/why-wooden-house"
+                pathname === "/why-timber-house"
                   ? "text-primary-base after:absolute after:left-1/2 after:bottom-0 after:h-[3px] after:w-[50%] after:bg-primary-dark after:translate-x-[-50%]"
                   : "hover:text-primary-base after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary-base after:transition-all after:duration-500 hover:after:w-[50%] hover:after:translate-x-[-50%]"
               }`}
             >
-              Why wooden house?
+              Why timber house?
             </Link>
-
-            {/* <Link
-            href="#"
-            className="hover:text-primary-base transition-all duration-200"
-          >
-            Benefits of wooden house
-          </Link> */}
             <Link
               href="/3d-design-tour"
               className={`py-1.5 relative transition-colors duration-300 ${
@@ -285,7 +278,7 @@ const Navbar = (props: Props) => {
 
           <div className="flex justify-between mb-2.5">
             <Link
-              href="/wooden-cottage"
+              href="/timber-cottage"
               onClick={toggleNav}
               className="bg-whites-light text-[#1A1A1A] text-[12px] leading-[13px] w-[23%] rounded-md overflow-hidden shadow-md cursor-pointer"
             >
@@ -299,12 +292,12 @@ const Navbar = (props: Props) => {
                 ></Image>
               </div>
               <div className="py-2 flex items-center justify-center w-full font-medium">
-                <p className="text-center max-w-[10ch]">Wooden Cottage</p>
+                <p className="text-center max-w-[10ch]">Timber Cottage</p>
               </div>
             </Link>
 
             <Link
-              href="/wooden-house"
+              href="/timber-house"
               onClick={toggleNav}
               className="bg-whites-light text-[#1A1A1A] text-[12px] leading-[13px] w-[23%] rounded-md overflow-hidden shadow-md cursor-pointer"
             >
@@ -318,12 +311,12 @@ const Navbar = (props: Props) => {
                 ></Image>
               </div>
               <div className="py-2 flex items-center justify-center w-full font-medium">
-                <p className="text-center max-w-[10ch]">Wooden House</p>
+                <p className="text-center max-w-[10ch]">Timber House</p>
               </div>
             </Link>
 
             <Link
-              href="/wooden-pergola-gazebo"
+              href="/timber-pergola-gazebo"
               onClick={toggleNav}
               className="bg-whites-light text-[#1A1A1A] text-[12px] leading-[13px] w-[23%] rounded-md overflow-hidden shadow-md cursor-pointer"
             >
@@ -342,7 +335,7 @@ const Navbar = (props: Props) => {
             </Link>
 
             <Link
-              href="/wooden-cafe"
+              href="/timber-cafe"
               onClick={toggleNav}
               className="bg-whites-light text-[#1A1A1A] text-[12px] leading-[13px] w-[23%] rounded-md overflow-hidden shadow-md cursor-pointer"
             >
@@ -356,7 +349,7 @@ const Navbar = (props: Props) => {
                 ></Image>
               </div>
               <div className="py-2 flex items-center justify-center w-full font-medium">
-                <p className="text-center max-w-[10ch]">Wooden Cafe</p>
+                <p className="text-center max-w-[10ch]">Timber Cafe</p>
               </div>
             </Link>
           </div>
@@ -373,12 +366,12 @@ const Navbar = (props: Props) => {
           </Link>
 
           <Link
-            href="/why-wooden-house"
+            href="/why-timber-house"
             onClick={toggleNav}
             className="w-full bg-whites-light text-[#282828] p-[10px] py-3 flex justify-between items-center rounded-[6px]  shadow-md cursor-pointer mb-2.5"
           >
             <p className="text-[13px] font-medium tracking-wide leading-4">
-              Why wooden house?
+              Why timber house?
             </p>
             <IoIosArrowForward className="text-primary-base " />
           </Link>

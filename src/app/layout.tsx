@@ -8,7 +8,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const lexend = Lexend_Deca({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "WoodenHousing",
+  title: "TimberHousing",
   description:
     "We have a floor plan for you! We deliver log and Modular prefab home on time, on budget, and in balance with nature's perfection. Our best design team also assist you in creating that customized home you've been dreaming of.",
 };

@@ -1,8 +1,8 @@
 export type Category =
-  | "Wooden Cottage"
-  | "Wooden Cafe"
-  | "Wooden House"
-  | "Wooden Pergola/Gazebo";
+  | "Timber Cottage"
+  | "Timber Cafe"
+  | "Timber House"
+  | "Timber Pergola/Gazebo";
 
 export interface ProjectData {
   id: number;
@@ -43,7 +43,7 @@ const modelsData: ModelData[] = [
   {
     id: "1",
     name: "Glass House 70 - Log Cabin",
-    category: "Wooden Cottage",
+    category: "Timber Cottage",
     floorCount: 1,
     bedroomCount: 1,
     projectDetails: {
@@ -87,7 +87,7 @@ const modelsData: ModelData[] = [
   {
     id: "2",
     name: "Three houses - Very good",
-    category: "Wooden Pergola/Gazebo",
+    category: "Timber Pergola/Gazebo",
     floorCount: 1,
     bedroomCount: 2,
     projectDetails: {

@@ -53,7 +53,7 @@ const WoodenHouseSeries = (props: Props) => {
       <div className="flex items-end justify-between w-full">
         <div className="flex flex-col">
           <h3 className="uppercase font-extrabold text-secondary-darkest sm:text-lg md:text-xl lg:text-2xl leading-7 md:leading-8 lg:leading-9">
-            Wooden Houses{" "}
+            Timber Houses{" "}
             <span className="ml-1 h-full uppercase text-primary-base text-sm sm:text-base md:text-lg lg:text-xl leading-5 lg:leading-6 font-extrabold inline-flex items-center">
               Series
             </span>
