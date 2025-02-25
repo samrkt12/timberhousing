@@ -63,7 +63,7 @@ const WoodenHouseSeries = (props: Props) => {
           </p>
         </div>
         <Link
-          href="#"
+          href="/timber-house"
           className="text-primary-base lg:text-lg hover:text-primary-dark"
         >
           See all

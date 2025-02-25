@@ -18,27 +18,27 @@ const servicesData = [
     title: "Timber Cottage",
     description:
       "Cozy, handcrafted timber cottages designed for comfort and natural charm.",
-    link: "/wooden-cottage",
+    link: "/timber-cottage",
   },
   {
     image: "/service2.jpg",
     title: "Timber House",
     description:
       "Luxurious timber villas offering elegance and sustainability in every detail.",
-    link: "/wooden-house",
+    link: "/timber-house",
   },
   {
     image: "/service3.jpg",
     title: "Pergola/Gazebo",
     description:
       "Elegant timber pergolas, perfect for enhancing your outdoor living spaces.",
-    link: "/wooden-pergola-gazebo",
+    link: "/timber-pergola-gazebo",
   },
   {
     image: "/service1.jpg",
     title: "Timber Cafe",
     description: "Elegant cafes perfect for gardens and outdoor spaces.",
-    link: "/wooden-cafe",
+    link: "/timber-cafe",
   },
 ];
 

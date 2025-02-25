@@ -62,7 +62,7 @@ const WoodenCafeSeries = (props: Props) => {
           </p>
         </div>
         <Link
-          href="#"
+          href="/timber-cafe"
           className="text-primary-base lg:text-lg hover:text-primary-dark"
         >
           See all

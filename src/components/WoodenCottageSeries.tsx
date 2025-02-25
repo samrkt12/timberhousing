@@ -63,7 +63,7 @@ const WoodenCottageSeries = (props: Props) => {
           </p>
         </div>
         <Link
-          href="/wooden-cottage"
+          href="/timber-cottage"
           className="text-primary-base lg:text-lg hover:text-primary-dark"
         >
           See all
